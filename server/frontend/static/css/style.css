@@ -117,3 +117,45 @@ footer {
         font-size: 30px;
     }
 }
+
+
+/* Página de contacto */
+
+.contact-section {
+    padding: 60px 8%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-card {
+    width: 100%;
+    max-width: 650px;
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 18px #00000012;
+}
+
+.contact-image {
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.contact-card p {
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+.contact-card a {
+    color: #2563eb;
+}
+
+@media (max-width: 600px) {
+    .contact-card {
+        padding: 25px 18px;
+    }
+}

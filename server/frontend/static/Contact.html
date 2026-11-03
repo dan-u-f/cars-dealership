@@ -1,0 +1,60 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos | Cars Dealership</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="/">Cars Dealership</a>
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/about/">Sobre Nosotros</a>
+                <a href="/contact/" class="active">Contáctenos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Contáctenos</h1>
+            <p>
+                Estamos aquí para ayudarte a encontrar tu
+                próximo automóvil. Comunícate con nuestro equipo.
+            </p>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-card">
+                <img
+                    src="{% static 'images/support.jpg' %}"
+                    alt="Representante de atención al cliente"
+                    class="contact-image"
+                >
+
+                <h2>Información de contacto</h2>
+
+                <p><strong>Empresa:</strong> Cars Dealership</p>
+                <p><strong>Dirección:</strong> 123 Main Street, Kansas City, MO, Estados Unidos</p>
+                <p><strong>Teléfono:</strong> +1 (555) 010-1234</p>
+                <p>
+                    <strong>Correo electrónico:</strong>
+                    <a href="mailto:contact@example.com">
+                        contact@example.com
+                    </a>
+                </p>
+                <p><strong>Horario:</strong> Lunes a viernes, 9:00 a 18:00</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Cars Dealership. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
