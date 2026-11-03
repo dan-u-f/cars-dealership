@@ -1,5 +1,6 @@
 import json
 
+from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from .models import Dealer, Review, CarMake, CarModel
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
@@ -241,3 +242,31 @@ def get_all_car_makes(request):
         {"car_makes": results},
         status=200
     )
+
+@require_GET
+def analyze_review(request):
+    text = request.GET.get("text", "").strip()
+
+    if not text:
+        return JsonResponse(
+            {"error": "Debes proporcionar un texto para analizar"},
+            status=400
+        )
+
+    analyzer = SentimentIntensityAnalyzer()
+    scores = analyzer.polarity_scores(text)
+
+    compound = scores["compound"]
+
+    if compound >= 0.05:
+        sentiment = "positive"
+    elif compound <= -0.05:
+        sentiment = "negative"
+    else:
+        sentiment = "neutral"
+
+    return JsonResponse({
+        "text": text,
+        "sentiment": sentiment,
+        "scores": scores
+    }, status=200)
