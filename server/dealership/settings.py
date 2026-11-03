@@ -132,3 +132,9 @@ TEMPLATES[0]["DIRS"].append(BASE_DIR / "frontend" / "static")
 STATICFILES_DIRS = [
     BASE_DIR / "frontend" / "static",
 ]
+
+# Orígenes permitidos para solicitudes CSRF desde React
+CSRF_TRUSTED_ORIGINS = [
+    "http://localhost:5173",
+    "http://127.0.0.1:5173",
+]
