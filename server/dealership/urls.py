@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.urls import path
-from frontend.views import about, contact, login_user, logout_user, csrf_token, register_user
+from frontend.views import about, contact, login_user, logout_user, csrf_token, register_user, get_all_dealers, get_dealer_by_id, get_dealers_by_state, get_dealer_reviews
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -10,4 +10,8 @@ urlpatterns = [
     path("api/logout/", logout_user, name="logout_user"),
     path("api/csrf/", csrf_token, name="csrf_token"),
     path("api/register/", register_user, name="register_user"),
+    path("api/dealers/", get_all_dealers, name="get_all_dealers"),
+    path("api/dealers/<int:dealer_id>/", get_dealer_by_id, name="get_dealer_by_id"),
+    path("api/dealers/state/<str:state>/", get_dealers_by_state, name="get_dealers_by_state"),
+    path("api/dealers/<int:dealer_id>/reviews/", get_dealer_reviews,name="get_dealer_reviews"),
 ]

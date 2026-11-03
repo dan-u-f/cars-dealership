@@ -1,5 +1,6 @@
 import json
 
+from .models import Dealer, Review
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
@@ -122,4 +123,96 @@ def register_user(request):
             "username": user.username
         },
         status=201
+    )
+
+from django.views.decorators.http import require_GET
+
+
+@require_GET
+def get_all_dealers(request):
+    dealers = Dealer.objects.all().values(
+        "id",
+        "full_name",
+        "short_name",
+        "city",
+        "state",
+        "address",
+        "zip_code"
+    )
+
+    return JsonResponse(
+        {"dealers": list(dealers)},
+        status=200
+    )
+
+@require_GET
+def get_dealer_by_id(request, dealer_id):
+    dealer = Dealer.objects.filter(id=dealer_id).values(
+        "id",
+        "full_name",
+        "short_name",
+        "city",
+        "state",
+        "address",
+        "zip_code"
+    ).first()
+
+    if dealer is None:
+        return JsonResponse(
+            {"error": "Concesionario no encontrado"},
+            status=404
+        )
+
+    return JsonResponse({"dealer": dealer}, status=200)
+
+@require_GET
+def get_dealers_by_state(request, state):
+    dealers = Dealer.objects.filter(
+        state__iexact=state
+    ).values(
+        "id",
+        "full_name",
+        "short_name",
+        "city",
+        "state",
+        "address",
+        "zip_code"
+    )
+
+    return JsonResponse(
+        {"dealers": list(dealers)},
+        status=200
+    )
+
+@require_GET
+def get_dealer_reviews(request, dealer_id):
+    if not Dealer.objects.filter(id=dealer_id).exists():
+        return JsonResponse(
+            {"error": "Concesionario no encontrado"},
+            status=404
+        )
+
+    reviews = Review.objects.filter(
+        dealer_id=dealer_id
+    ).select_related("user")
+
+    results = []
+
+    for review in reviews:
+        results.append({
+            "id": review.id,
+            "dealer_id": review.dealer_id,
+            "username": review.user.username,
+            "review": review.review,
+            "purchase": review.purchase,
+            "purchase_date": (
+                review.purchase_date.isoformat()
+                if review.purchase_date else None
+            ),
+            "created_at": review.created_at.isoformat()
+        })
+
+    return JsonResponse(
+        {"reviews": results},
+        status=200
     )
