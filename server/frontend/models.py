@@ -31,3 +31,30 @@ class Review(models.Model):
 
     def __str__(self):
         return f"{self.user.username} - {self.dealer.full_name}"
+
+class CarMake(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+
+class CarModel(models.Model):
+    make = models.ForeignKey(
+        CarMake,
+        on_delete=models.CASCADE,
+        related_name="models"
+    )
+    name = models.CharField(max_length=100)
+    car_type = models.CharField(max_length=50, blank=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["make", "name"],
+                name="unique_car_model_per_make"
+            )
+        ]
+
+    def __str__(self):
+        return f"{self.make.name} {self.name}"

@@ -1,6 +1,6 @@
 import json
 
-from .models import Dealer, Review
+from .models import Dealer, Review, CarMake, CarModel
 from django.contrib.auth import authenticate, login, logout
 from django.http import JsonResponse
 from django.views.decorators.http import require_POST
@@ -214,5 +214,30 @@ def get_dealer_reviews(request, dealer_id):
 
     return JsonResponse(
         {"reviews": results},
+        status=200
+    )
+
+@require_GET
+def get_all_car_makes(request):
+    makes = CarMake.objects.prefetch_related("models").all()
+
+    results = []
+
+    for make in makes:
+        results.append({
+            "id": make.id,
+            "name": make.name,
+            "models": [
+                {
+                    "id": model.id,
+                    "name": model.name,
+                    "car_type": model.car_type
+                }
+                for model in make.models.all()
+            ]
+        })
+
+    return JsonResponse(
+        {"car_makes": results},
         status=200
     )
