@@ -1,0 +1,86 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros | Cars Dealership</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a class="logo" href="/">Cars Dealership</a>
+            <div class="nav-links">
+                <a href="/">Inicio</a>
+                <a href="/about" class="active">Sobre Nosotros</a>
+                <a href="/contact">Contáctenos</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Sobre Nosotros</h1>
+            <p>
+                En Cars Dealership ayudamos a nuestros clientes
+                a encontrar el automóvil ideal, ofreciendo
+                transparencia, confianza y atención personalizada.
+            </p>
+        </section>
+
+        <section class="team-section">
+            <h2>Conoce a nuestro equipo</h2>
+
+            <div class="team-grid">
+                <article class="team-card">
+                    <img src="{% static 'images/manager.jpg' %}"
+                         alt="Fotografía del gerente general">
+                    <h3>Alex Morgan</h3>
+                    <p class="role">Gerente General</p>
+                    <p>
+                        Coordina las operaciones y trabaja para
+                        ofrecer una excelente experiencia al cliente.
+                    </p>
+                    <a href="mailto:alex.morgan@example.com">
+                        alex.morgan@example.com
+                    </a>
+                </article>
+
+                <article class="team-card">
+                    <img src="{% static 'images/sales.jpg' %}"
+                         alt="Fotografía de la directora de ventas">
+                    <h3>Sarah Johnson</h3>
+                    <p class="role">Directora de Ventas</p>
+                    <p>
+                        Ayuda a los clientes a encontrar vehículos
+                        que se adapten a sus necesidades y presupuesto.
+                    </p>
+                    <a href="mailto:sarah.johnson@example.com">
+                        sarah.johnson@example.com
+                    </a>
+                </article>
+
+                <article class="team-card">
+                    <img src="{% static 'images/support.jpg' %}"
+                         alt="Fotografía del responsable de atención al cliente">
+                    <h3>Michael Davis</h3>
+                    <p class="role">Atención al Cliente</p>
+                    <p>
+                        Resuelve consultas y acompaña a nuestros
+                        clientes durante todo el proceso de compra.
+                    </p>
+                    <a href="mailto:michael.davis@example.com">
+                        michael.davis@example.com
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Cars Dealership. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
