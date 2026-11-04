@@ -1,5 +1,6 @@
 import json
 
+from django.contrib.auth.decorators import login_required
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from .models import Dealer, Review, CarMake, CarModel
 from django.contrib.auth import authenticate, login, logout
@@ -270,3 +271,60 @@ def analyze_review(request):
         "sentiment": sentiment,
         "scores": scores
     }, status=200)
+
+
+@login_required
+@require_POST
+def add_review(request, dealer_id):
+    try:
+        dealer = Dealer.objects.get(id=dealer_id)
+    except Dealer.DoesNotExist:
+        return JsonResponse(
+            {"error": "Concesionario no encontrado"},
+            status=404
+        )
+
+    try:
+        data = json.loads(request.body)
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse(
+            {"error": "JSON inválido"},
+            status=400
+        )
+
+    review_text = str(data.get("review", "")).strip()
+    purchase = data.get("purchase", False)
+
+    if not review_text:
+        return JsonResponse(
+            {"error": "La reseña no puede estar vacía"},
+            status=400
+        )
+
+    if not isinstance(purchase, bool):
+        return JsonResponse(
+            {"error": "El campo purchase debe ser verdadero o falso"},
+            status=400
+        )
+
+    review = Review.objects.create(
+        dealer=dealer,
+        user=request.user,
+        review=review_text,
+        purchase=purchase
+    )
+
+    return JsonResponse(
+        {
+            "status": "success",
+            "message": "Reseña publicada correctamente",
+            "review": {
+                "id": review.id,
+                "dealer_id": dealer.id,
+                "username": request.user.username,
+                "review": review.review,
+                "purchase": review.purchase
+            }
+        },
+        status=201
+    )
