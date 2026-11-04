@@ -7,3 +7,5 @@ node_modules/
 dist/
 cookies.txt
 login_request.json
+staticfiles/
+ci-logs/

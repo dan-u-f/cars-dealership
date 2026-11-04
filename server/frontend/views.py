@@ -11,6 +11,9 @@ from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
+from django.conf import settings
+from django.http import HttpResponse
+from django.views.decorators.http import require_GET
 
 def about(request):
     return render(request, "About.html")
@@ -328,3 +331,32 @@ def add_review(request, dealer_id):
         },
         status=201
     )
+
+@ensure_csrf_cookie
+def react_app(request, dealer_id=None):
+    index_path = settings.BASE_DIR / "frontend" / "dist" / "index.html"
+
+    if not index_path.is_file():
+        return HttpResponse(
+            "React no está compilado. Ejecuta npm run build.",
+            status=503,
+        )
+
+    return HttpResponse(
+        index_path.read_text(encoding="utf-8"),
+        content_type="text/html",
+    )
+
+
+@require_GET
+def current_user(request):
+    if request.user.is_authenticated:
+        return JsonResponse({
+            "authenticated": True,
+            "username": request.user.username
+        })
+
+    return JsonResponse({
+        "authenticated": False,
+        "username": None
+    })

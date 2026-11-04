@@ -1,5 +1,5 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar/Navbar";
 import Dealers from "./components/Dealers/Dealers";
 import DealerDetails from "./components/DealerDetails/DealerDetails";
@@ -8,26 +8,121 @@ import Login from "./components/Login/Login";
 import AddReview from "./components/AddReview/AddReview";
 
 export default function App() {
-  const [page, setPage] = useState("dealers");
-  const [username, setUsername] = useState("");
-  const [selectedDealerId, setSelectedDealerId] = useState(null);
+  
+const getInitialRoute = () => {
+  const path = window.location.pathname;
+
+  const reviewMatch = path.match(/^\/dealers\/(\d+)\/review\/?$/);
+
+  if (reviewMatch) {
+    return {
+      page: "add-review",
+      dealerId: Number(reviewMatch[1]),
+    };
+  }
+
+  const dealerMatch = path.match(/^\/dealers\/(\d+)\/?$/);
+
+  if (dealerMatch) {
+    return {
+      page: "dealer-details",
+      dealerId: Number(dealerMatch[1]),
+    };
+  }
+  
+
+  return {
+    page: "dealers",
+    dealerId: null,
+  };
+};
+
+const [initialRoute] = useState(getInitialRoute);
+const [page, setPage] = useState(initialRoute.page);
+const [username, setUsername] = useState("");
+
+const [checkingSession, setCheckingSession] = useState(true);
+
+useEffect(() => {
+  let active = true;
+
+  async function restoreSession() {
+    try {
+      const response = await fetch("/api/me/", {
+        credentials: "include"
+      });
+
+      if (!response.ok) {
+        throw new Error("No se pudo consultar la sesión");
+      }
+
+      const data = await response.json();
+
+      if (active && data.authenticated) {
+        setUsername(data.username);
+      }
+    } catch (error) {
+      console.error("Error al recuperar la sesión:", error);
+    } finally {
+      if (active) {
+        setCheckingSession(false);
+      }
+    }
+  }
+
+  restoreSession();
+
+  return () => {
+    active = false;
+  };
+}, []);
+
+const [selectedDealerId, setSelectedDealerId] = useState(
+  initialRoute.dealerId
+);
+
   const [authError, setAuthError] = useState("");
+
+ 
+
+  
+
+useEffect(() => {
+  function handlePopState() {
+    const route = getInitialRoute();
+
+    setPage(route.page);
+    setSelectedDealerId(route.dealerId);
+    setAuthError("");
+  }
+
+  window.addEventListener("popstate", handlePopState);
+
+  return () => {
+    window.removeEventListener("popstate", handlePopState);
+  };
+}, []);
+
+
+
 
   function handleNavigate(destination) {
     if (destination === "about") {
-      window.location.href = "http://127.0.0.1:8000/about/";
+      window.location.href = "/about/";
       return;
-    }
-
-    if (destination === "contact") {
-      window.location.href = "http://127.0.0.1:8000/contact/";
-      return;
-    }
-    
-    setPage(destination);
   }
+
+  if (destination === "contact") {
+    window.location.href = "/contact/";
+    return;
+  }
+
+  setPage(destination);
+}
+
   
   function handleSelectDealer(dealerId) {
+  
     setSelectedDealerId(dealerId);
     setPage("dealer-details");
     window.history.pushState({}, "", `/dealers/${dealerId}`);
@@ -95,11 +190,22 @@ export default function App() {
       setUsername("");
       setPage("dealers");
       window.history.pushState({}, "", "/dealers");
+    
     } catch (err) {
       setAuthError(err.message);
     }
   }
 
+  // Esperar mientras Django comprueba la sesión
+  if (checkingSession) {
+    return (
+      <p style={{ padding: 24 }}>
+        Cargando sesión...
+      </p>
+    );
+  }
+
+  // Interfaz principal
   return (
     <>
       <Navbar
