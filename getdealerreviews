@@ -1,1 +1,5 @@
-{"reviews": [{"id": 1, "dealer_id": 1, "username": "dan", "review": "Excelente atenci\u00f3n y servicio. Recomiendo este concesionario.", "purchase": true, "purchase_date": null, "created_at": "2026-11-03T21:11:45.287129+00:00"}]}
+﻿Comando cURL utilizado:
+curl.exe -s http://127.0.0.1:8000/api/dealers/1/reviews/
+
+Salida del servidor:
+{"reviews": [{"id": 1, "dealer_id": 1, "username": "dan", "review": "Excelente atenci\u00f3n y servicio. Recomiendo este concesionario.", "purchase": true, "purchase_date": null, "created_at": "2026-11-03T21:11:45.287129+00:00"}, {"id": 2, "dealer_id": 1, "username": "dan", "review": "Excelente experiencia. El personal fue muy amable y me ayud\u00f3 a encontrar el veh\u00edculo adecuado. Recomiendo este concesionario.", "purchase": true, "purchase_date": null, "created_at": "2026-11-04T01:02:32.690269+00:00"}]}

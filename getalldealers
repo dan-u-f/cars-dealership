@@ -1,1 +1,5 @@
+﻿Comando cURL utilizado:
+curl.exe -s http://127.0.0.1:8000/api/dealers/
+
+Salida del servidor:
 {"dealers": [{"id": 1, "full_name": "Kansas City Auto Center", "short_name": "KC Auto", "city": "Kansas City", "state": "Kansas", "address": "1200 Main Street", "zip_code": "66101"}, {"id": 2, "full_name": "Wichita Motors", "short_name": "Wichita Motors", "city": "Wichita", "state": "Kansas", "address": "450 Douglas Avenue", "zip_code": "67202"}, {"id": 3, "full_name": "Denver Premium Cars", "short_name": "Denver Cars", "city": "Denver", "state": "Colorado", "address": "800 Broadway", "zip_code": "80203"}]}

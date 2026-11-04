@@ -1,1 +1,5 @@
-﻿{"status": "success", "message": "Sesi\u00f3n cerrada correctamente"}
+﻿Comando cURL utilizado:
+curl.exe -s -b cookies.txt -c cookies.txt -X POST -H "X-CSRFToken: $csrf" http://127.0.0.1:8000/api/logout/
+
+Salida del servidor:
+{"status": "success", "message": "Sesión cerrada correctamente"}

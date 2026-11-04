@@ -1,1 +1,5 @@
+﻿Comando cURL utilizado:
+curl.exe -s "http://127.0.0.1:8000/api/analyze/?text=Fantastic%20Services"
+
+Salida del servidor:
 {"text": "Fantastic Services", "sentiment": "positive", "scores": {"neg": 0.0, "neu": 0.217, "pos": 0.783, "compound": 0.5574}}
