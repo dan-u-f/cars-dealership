@@ -1,11 +1,33 @@
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function AddReview({ dealerId, onSuccess, onCancel }) {
   const [review, setReview] = useState("");
   const [purchase, setPurchase] = useState(false);
+  const [purchaseDate, setPurchaseDate] = useState("");
+  const [carMake, setCarMake] = useState("");
+  const [carYear, setCarYear] = useState("");
+  const [carMakes, setCarMakes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+
+  const currentYear = new Date().getFullYear();
+
+  useEffect(() => {
+    async function loadCarMakes() {
+      try {
+        const response = await fetch("/api/cars/");
+        if (!response.ok) throw new Error("Error al cargar las marcas");
+
+        const data = await response.json();
+        setCarMakes(data.car_makes || []);
+      } catch (err) {
+        setError(err.message);
+      }
+    }
+
+    loadCarMakes();
+  }, []);
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -41,7 +63,10 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
           },
           body: JSON.stringify({
             review: review.trim(),
-            purchase
+            purchase,
+            purchase_date: purchase ? purchaseDate : null,
+            car_make_id: purchase ? Number(carMake) : null,
+            car_year: purchase ? Number(carYear) : null
           })
         }
       );
@@ -49,9 +74,7 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
       const data = await response.json();
 
       if (!response.ok) {
-        throw new Error(
-          data.error || "No se pudo publicar la reseña"
-        );
+        throw new Error(data.error || "No se pudo publicar la reseña");
       }
 
       onSuccess();
@@ -62,10 +85,21 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
     }
   }
 
+  const inputStyle = {
+    display: "block",
+    width: "100%",
+    marginTop: 8,
+    marginBottom: 16,
+    padding: 12,
+    borderRadius: 8,
+    border: "1px solid #d5deea",
+    boxSizing: "border-box",
+    fontFamily: "inherit"
+  };
+
   return (
     <main className="dealers-content">
-      <h1>Escribir una reseña</h1>
-
+      <h1>Post Review</h1>
       <p>Comparte tu experiencia con este concesionario.</p>
 
       <form
@@ -74,7 +108,7 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
         style={{ maxWidth: 650 }}
       >
         <label htmlFor="review">
-          <strong>Tu opinión</strong>
+          <strong>Review</strong>
         </label>
 
         <textarea
@@ -83,27 +117,11 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
           onChange={(event) => setReview(event.target.value)}
           placeholder="Cuéntanos cómo fue tu experiencia..."
           required
-          rows={6}
-          style={{
-            display: "block",
-            width: "100%",
-            marginTop: 12,
-            padding: 14,
-            borderRadius: 8,
-            border: "1px solid #d5deea",
-            fontFamily: "inherit",
-            resize: "vertical"
-          }}
+          rows={5}
+          style={{ ...inputStyle, resize: "vertical" }}
         />
 
-        <label
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: 10,
-            marginTop: 24
-          }}
-        >
+        <label style={{ display: "flex", gap: 10, marginBottom: 20 }}>
           <input
             type="checkbox"
             checked={purchase}
@@ -111,6 +129,56 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
           />
           Compré un vehículo en este concesionario
         </label>
+
+        {purchase && (
+          <>
+            <label htmlFor="purchaseDate">
+              <strong>Purchase Date</strong>
+            </label>
+            <input
+              id="purchaseDate"
+              type="date"
+              value={purchaseDate}
+              onChange={(event) => setPurchaseDate(event.target.value)}
+              max={new Date().toLocaleDateString("en-CA")}
+              required
+              style={inputStyle}
+            />
+
+            <label htmlFor="carMake">
+              <strong>Car Make</strong>
+            </label>
+            <select
+              id="carMake"
+              value={carMake}
+              onChange={(event) => setCarMake(event.target.value)}
+              required
+              style={inputStyle}
+            >
+              <option value="">Selecciona una marca</option>
+              {carMakes.map((make) => (
+                <option key={make.id} value={make.id}>
+                  {make.name}
+                </option>
+              ))}
+            </select>
+
+            <label htmlFor="carYear">
+              <strong>Car Year</strong>
+            </label>
+            <input
+              id="carYear"
+              type="number"
+              min="1900"
+              max={currentYear + 1}
+              value={carYear}
+              onChange={(event) => setCarYear(event.target.value)}
+              placeholder="Ejemplo: 2024"
+              required
+              style={inputStyle}
+            />
+          </>
+        )}
 
         {error && (
           <p role="alert" style={{ color: "#b42318" }}>
@@ -124,7 +192,7 @@ export default function AddReview({ dealerId, onSuccess, onCancel }) {
             className="dealer-button"
             disabled={loading}
           >
-            {loading ? "Publicando..." : "Publicar reseña"}
+            {loading ? "Publicando..." : "Post Review"}
           </button>
 
           <button

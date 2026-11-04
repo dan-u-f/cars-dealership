@@ -27,10 +27,13 @@ class Review(models.Model):
     review = models.TextField()
     purchase = models.BooleanField(default=False)
     purchase_date = models.DateField(null=True, blank=True)
+    car_make = models.ForeignKey("CarMake",on_delete=models.SET_NULL,null=True,blank=True)
+    car_year = models.PositiveIntegerField(null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
         return f"{self.user.username} - {self.dealer.full_name}"
+    
 
 class CarMake(models.Model):
     name = models.CharField(max_length=100, unique=True)

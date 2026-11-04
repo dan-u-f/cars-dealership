@@ -298,6 +298,41 @@ def add_review(request, dealer_id):
     review_text = str(data.get("review", "")).strip()
     purchase = data.get("purchase", False)
 
+    
+    purchase_date = data.get("purchase_date")
+    car_make_id = data.get("car_make_id")
+    car_year = data.get("car_year")
+
+    if purchase:
+        from datetime import date
+
+        try:
+            parsed_date = date.fromisoformat(purchase_date)
+            parsed_year = int(car_year)
+            make = CarMake.objects.get(pk=car_make_id)
+        except (ValueError, TypeError, CarMake.DoesNotExist):
+            return JsonResponse(
+                {"error": "Datos del vehículo inválidos"},
+                status=400
+            )
+
+        if parsed_date > date.today():
+            return JsonResponse(
+                {"error": "La fecha de compra no puede ser futura"},
+                status=400
+            )
+
+        if not 1900 <= parsed_year <= date.today().year + 1:
+            return JsonResponse(
+                {"error": "Año del automóvil inválido"},
+                status=400
+            )
+    else:
+        parsed_date = None
+        parsed_year = None
+        make = None
+
+
     if not review_text:
         return JsonResponse(
             {"error": "La reseña no puede estar vacía"},
@@ -311,11 +346,14 @@ def add_review(request, dealer_id):
         )
 
     review = Review.objects.create(
-        dealer=dealer,
-        user=request.user,
-        review=review_text,
-        purchase=purchase
-    )
+    dealer=dealer,
+    user=request.user,
+    review=review_text,
+    purchase=purchase,
+    purchase_date=parsed_date,
+    car_make=make,
+    car_year=parsed_year
+)
 
     return JsonResponse(
         {
@@ -326,7 +364,12 @@ def add_review(request, dealer_id):
                 "dealer_id": dealer.id,
                 "username": request.user.username,
                 "review": review.review,
-                "purchase": review.purchase
+                "purchase": review.purchase, 
+                "purchase_date": (
+                    review.purchase_date.isoformat()
+                    if review.purchase_date else None),
+                    "car_make": review.car_make.name if review.car_make else None,
+                    "car_year": review.car_year
             }
         },
         status=201
