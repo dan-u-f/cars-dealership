@@ -1,0 +1,134 @@
+﻿========== .\ci-logs\Django Backend\4_Install Python dependencies.txt ==========
+2026-11-04T02:01:23.4042880Z ##[group]Run pip install -r requirements.txt
+2026-11-04T02:01:23.4043223Z [36;1mpip install -r requirements.txt[0m
+2026-11-04T02:01:23.4066387Z shell: /usr/bin/bash -e {0}
+2026-11-04T02:01:23.4066607Z env:
+2026-11-04T02:01:23.4066840Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:23.4067185Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T02:01:23.4067517Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:23.4067809Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:23.4068328Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:23.4068627Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T02:01:23.4068878Z ##[endgroup]
+2026-11-04T02:01:24.6569603Z Collecting asgiref==3.13.0 (from -r requirements.txt (line 1))
+2026-11-04T02:01:24.7256668Z   Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+2026-11-04T02:01:24.7530821Z Collecting certifi==2026.10.23 (from -r requirements.txt (line 2))
+2026-11-04T02:01:24.7634724Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-04T02:01:24.8764400Z Collecting charset-normalizer==3.5.2 (from -r requirements.txt (line 3))
+2026-11-04T02:01:24.8870351Z   Downloading charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-11-04T02:01:24.9365736Z Collecting Django==6.1.3 (from -r requirements.txt (line 4))
+2026-11-04T02:01:24.9479088Z   Downloading django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+2026-11-04T02:01:24.9664525Z Collecting idna==3.20 (from -r requirements.txt (line 5))
+2026-11-04T02:01:24.9765630Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-04T02:01:24.9993402Z Collecting requests==2.34.2 (from -r requirements.txt (line 6))
+2026-11-04T02:01:25.0130933Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-11-04T02:01:25.0303522Z Collecting sqlparse==0.6.1 (from -r requirements.txt (line 7))
+2026-11-04T02:01:25.0404822Z   Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+2026-11-04T02:01:25.0608893Z Collecting tzdata==2026.6 (from -r requirements.txt (line 8))
+2026-11-04T02:01:25.0711114Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-11-04T02:01:25.0942984Z Collecting urllib3==2.8.0 (from -r requirements.txt (line 9))
+2026-11-04T02:01:25.1046070Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-04T02:01:25.1228608Z Collecting vaderSentiment==3.3.2 (from -r requirements.txt (line 10))
+2026-11-04T02:01:25.1334734Z   Downloading vaderSentiment-3.3.2-py2.py3-none-any.whl.metadata (572 bytes)
+2026-11-04T02:01:25.1505789Z Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
+2026-11-04T02:01:25.1769675Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-04T02:01:25.1983378Z Downloading charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (255 kB)
+2026-11-04T02:01:25.2245536Z Downloading django-6.1.3-py3-none-any.whl (8.4 MB)
+2026-11-04T02:01:25.3194322Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 89.4 MB/s  0:00:00
+2026-11-04T02:01:25.3295689Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+2026-11-04T02:01:25.3411449Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+2026-11-04T02:01:25.3527600Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-11-04T02:01:25.3656486Z Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
+2026-11-04T02:01:25.3772084Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+2026-11-04T02:01:25.3914409Z Downloading vaderSentiment-3.3.2-py2.py3-none-any.whl (125 kB)
+2026-11-04T02:01:25.6023541Z Installing collected packages: urllib3, tzdata, sqlparse, idna, charset-normalizer, certifi, asgiref, requests, Django, vaderSentiment
+2026-11-04T02:01:27.7064559Z 
+2026-11-04T02:01:27.7077723Z Successfully installed Django-6.1.3 asgiref-3.13.0 certifi-2026.10.23 charset-normalizer-3.5.2 idna-3.20 requests-2.34.2 sqlparse-0.6.1 tzdata-2026.6 urllib3-2.8.0 vaderSentiment-3.3.2
+2026-11-04T02:01:27.7084493Z 
+2026-11-04T02:01:27.7085014Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-04T02:01:27.7086732Z [notice] To update, run: pip install --upgrade pip
+
+========== .\ci-logs\Django Backend\5_Check Django configuration.txt ==========
+2026-11-04T02:01:27.7892149Z ##[group]Run python manage.py check
+2026-11-04T02:01:27.7892436Z [36;1mpython manage.py check[0m
+2026-11-04T02:01:27.7911559Z shell: /usr/bin/bash -e {0}
+2026-11-04T02:01:27.7911770Z env:
+2026-11-04T02:01:27.7911989Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:27.7912331Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T02:01:27.7912655Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:27.7912953Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:27.7913262Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:27.7913552Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T02:01:27.7913806Z ##[endgroup]
+2026-11-04T02:01:28.6871652Z System check identified no issues (0 silenced).
+
+========== .\ci-logs\Django Backend\6_Check migrations.txt ==========
+2026-11-04T02:01:28.7320213Z ##[group]Run python manage.py makemigrations --check --dry-run
+2026-11-04T02:01:28.7320626Z [36;1mpython manage.py makemigrations --check --dry-run[0m
+2026-11-04T02:01:28.7338826Z shell: /usr/bin/bash -e {0}
+2026-11-04T02:01:28.7339037Z env:
+2026-11-04T02:01:28.7339255Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:28.7339594Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T02:01:28.7339943Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:28.7340234Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:28.7340522Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:28.7340811Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T02:01:28.7341064Z ##[endgroup]
+2026-11-04T02:01:28.9483444Z No changes detected
+
+========== .\ci-logs\Django Backend\7_Run Django tests.txt ==========
+2026-11-04T02:01:29.0003794Z ##[group]Run python manage.py test
+2026-11-04T02:01:29.0004063Z [36;1mpython manage.py test[0m
+2026-11-04T02:01:29.0022327Z shell: /usr/bin/bash -e {0}
+2026-11-04T02:01:29.0022532Z env:
+2026-11-04T02:01:29.0022748Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:29.0023083Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T02:01:29.0023408Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:29.0023700Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:29.0023986Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T02:01:29.0024273Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T02:01:29.0024524Z ##[endgroup]
+2026-11-04T02:01:29.6326055Z 
+2026-11-04T02:01:29.6326584Z ----------------------------------------------------------------------
+2026-11-04T02:01:29.6327207Z Ran 0 tests in 0.000s
+2026-11-04T02:01:29.6327363Z 
+2026-11-04T02:01:29.6327462Z NO TESTS RAN
+2026-11-04T02:01:29.6327787Z Found 0 test(s).
+2026-11-04T02:01:29.6328070Z System check identified no issues (0 silenced).
+
+========== .\ci-logs\React Frontend\4_Install frontend dependencies.txt ==========
+2026-11-04T02:01:26.4292021Z ##[group]Run npm ci
+2026-11-04T02:01:26.4292383Z [36;1mnpm ci[0m
+2026-11-04T02:01:26.4320665Z shell: /usr/bin/bash -e {0}
+2026-11-04T02:01:26.4320971Z ##[endgroup]
+2026-11-04T02:01:27.4821226Z 
+2026-11-04T02:01:27.4829006Z added 18 packages, and audited 19 packages in 993ms
+2026-11-04T02:01:27.4829799Z 
+2026-11-04T02:01:27.4830470Z 8 packages are looking for funding
+2026-11-04T02:01:27.4831066Z   run `npm fund` for details
+2026-11-04T02:01:27.4832039Z 
+2026-11-04T02:01:27.5254846Z found 0 vulnerabilities
+
+========== .\ci-logs\React Frontend\5_Build React application.txt ==========
+2026-11-04T02:01:27.5292520Z ##[group]Run npm run build
+2026-11-04T02:01:27.5292862Z [36;1mnpm run build[0m
+2026-11-04T02:01:27.5316134Z shell: /usr/bin/bash -e {0}
+2026-11-04T02:01:27.5316409Z ##[endgroup]
+2026-11-04T02:01:27.6304406Z 
+2026-11-04T02:01:27.6305174Z > frontend@1.0.0 build
+2026-11-04T02:01:27.6305568Z > vite build
+2026-11-04T02:01:27.6305709Z 
+2026-11-04T02:01:27.8167409Z [33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+2026-11-04T02:01:27.8171094Z   - ESM syntax in a file loaded as CommonJS (vite.config.js:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+2026-11-04T02:01:27.8172920Z Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
+2026-11-04T02:01:27.8299271Z [36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+2026-11-04T02:01:27.8479854Z transforming...
+2026-11-04T02:01:27.9079012Z ✓ 24 modules transformed.
+2026-11-04T02:01:27.9278548Z rendering chunks...
+2026-11-04T02:01:27.9613746Z computing gzip size...
+2026-11-04T02:01:27.9660377Z dist/index.html                   0.38 kB │ gzip:  0.27 kB
+2026-11-04T02:01:27.9661381Z dist/assets/index-DJkI1kXl.css    3.66 kB │ gzip:  1.22 kB
+2026-11-04T02:01:27.9662251Z dist/assets/index-CPjt7XTh.js   233.11 kB │ gzip: 72.46 kB
+2026-11-04T02:01:27.9662643Z 
+2026-11-04T02:01:27.9664320Z [32m✓ built in 136ms[39m
+
