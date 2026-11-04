@@ -33,4 +33,4 @@ COPY --from=frontend-build /app/frontend/dist /app/frontend/dist
 RUN python manage.py collectstatic --noinput
 
 # Render proporciona el puerto mediante PORT
-CMD ["sh", "-c", "gunicorn dealership.wsgi:application --bind 0.0.0.0:${PORT:-10000}"]
+CMD ["sh", "-c", "python manage.py migrate --noinput && python manage.py shell -c \"exec(open('seed_dealers.py', encoding='utf-8').read())\" && python manage.py shell -c \"exec(open('seed_cars.py', encoding='utf-8').read())\" && exec gunicorn dealership.wsgi:application --bind 0.0.0.0:${PORT:-10000}"]
