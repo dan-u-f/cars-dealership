@@ -4,29 +4,41 @@ import "./Dealers.css";
 
 export default function Dealers({ onSelectDealer, username }) {
   const [dealers, setDealers] = useState([]);
+  const [selectedState, setSelectedState] = useState(() => {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("state") || "";});
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
-  useEffect(() => {
-    async function loadDealers() {
-      try {
-        const response = await fetch("/api/dealers/");
+  
+useEffect(() => {
+  async function loadDealers() {
+    setLoading(true);
+    setError("");
 
-        if (!response.ok) {
-          throw new Error("No se pudieron cargar los concesionarios");
-        }
+    try {
+      const endpoint = selectedState
+        ? `/api/dealers/state/${encodeURIComponent(selectedState)}/`
+        : "/api/dealers/";
 
-        const data = await response.json();
-        setDealers(data.dealers);
-      } catch (err) {
-        setError(err.message);
-      } finally {
-        setLoading(false);
+      const response = await fetch(endpoint);
+
+      if (!response.ok) {
+        throw new Error("No se pudieron cargar los concesionarios");
       }
-    }
 
-    loadDealers();
-  }, []);
+      const data = await response.json();
+      setDealers(data.dealers);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  loadDealers();
+}, [selectedState]);
+
 
   return (
     <main className="dealers-page">
@@ -40,6 +52,32 @@ export default function Dealers({ onSelectDealer, username }) {
       </section>
 
       <section className="dealers-content">
+        <div className="dealers-filter">
+          <label htmlFor="state-filter">
+            <strong>Filtrar por estado:</strong>
+            </label>
+            
+            <select
+            id="state-filter"
+            value={selectedState}
+            onChange={(event) => {
+              const state = event.target.value;
+              setSelectedState(state);
+              
+              const url = state
+              ? `/dealers?state=${encodeURIComponent(state)}`
+              : "/dealers";
+              
+              window.history.pushState({}, "", url);
+                
+            }}>
+              
+              <option value="">Todos los estados</option>
+              <option value="Kansas">Kansas</option>
+              <option value="Colorado">Colorado</option>
+              </select>
+            </div>
+
         <div className="dealers-heading">
           <h2>Concesionarios disponibles</h2>
           <span>{dealers.length} resultados</span>
