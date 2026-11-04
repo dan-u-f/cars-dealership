@@ -13,7 +13,7 @@ from django.contrib.auth.password_validation import validate_password
 from django.core.exceptions import ValidationError
 from django.conf import settings
 from django.http import HttpResponse
-from django.views.decorators.http import require_GET
+from django.views.decorators.http import require_POST, require_GET
 
 def about(request):
     return render(request, "About.html")
@@ -129,9 +129,6 @@ def register_user(request):
         },
         status=201
     )
-
-from django.views.decorators.http import require_GET
-
 
 @require_GET
 def get_all_dealers(request):
