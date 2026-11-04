@@ -360,3 +360,71 @@ def current_user(request):
         "authenticated": False,
         "username": None
     })
+
+
+@require_POST
+def coursera_login(request):
+    try:
+        data = json.loads(request.body)
+    except (json.JSONDecodeError, UnicodeDecodeError):
+        return JsonResponse(
+            {"status": "Error", "message": "Invalid JSON"},
+            status=400
+        )
+
+    username = data.get("userName", "")
+    password = data.get("password", "")
+
+    user = authenticate(
+        request,
+        username=username,
+        password=password
+    )
+
+    if user is None:
+        return JsonResponse(
+            {"status": "Failed", "message": "Invalid credentials"},
+            status=401
+        )
+
+    login(request, user)
+
+    return JsonResponse({
+        "status": "Authenticated",
+        "userName": user.username
+    })
+
+
+@require_GET
+def coursera_logout(request):
+    logout(request)
+
+    return JsonResponse({
+        "userName": ""
+    })
+
+
+@require_GET
+def coursera_get_cars(request):
+    makes = CarMake.objects.prefetch_related("models").all()
+
+    results = []
+
+    for make in makes:
+        results.append({
+            "id": make.id,
+            "name": make.name,
+            "CarModels": [
+                {
+                    "id": model.id,
+                    "name": model.name,
+                    "car_type": model.car_type
+                }
+                for model in make.models.all()
+            ]
+        })
+
+    return JsonResponse(
+        {"CarMakes": results},
+        status=200
+    )

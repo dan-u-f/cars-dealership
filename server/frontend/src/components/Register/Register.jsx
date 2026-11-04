@@ -136,7 +136,7 @@ const handleSubmit = async (event) => {
             required
           />
 
-          <button type="submit">Registrarse</button>
+          <button type="submit">Register</button>
         </form>
 
         {message && <p className="register-message">{message}</p>}
