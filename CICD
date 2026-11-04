@@ -1,134 +1,1744 @@
-﻿========== .\ci-logs\Django Backend\4_Install Python dependencies.txt ==========
-2026-11-04T02:01:23.4042880Z ##[group]Run pip install -r requirements.txt
-2026-11-04T02:01:23.4043223Z [36;1mpip install -r requirements.txt[0m
-2026-11-04T02:01:23.4066387Z shell: /usr/bin/bash -e {0}
-2026-11-04T02:01:23.4066607Z env:
-2026-11-04T02:01:23.4066840Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:23.4067185Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
-2026-11-04T02:01:23.4067517Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:23.4067809Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:23.4068328Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:23.4068627Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
-2026-11-04T02:01:23.4068878Z ##[endgroup]
-2026-11-04T02:01:24.6569603Z Collecting asgiref==3.13.0 (from -r requirements.txt (line 1))
-2026-11-04T02:01:24.7256668Z   Downloading asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
-2026-11-04T02:01:24.7530821Z Collecting certifi==2026.10.23 (from -r requirements.txt (line 2))
-2026-11-04T02:01:24.7634724Z   Downloading certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
-2026-11-04T02:01:24.8764400Z Collecting charset-normalizer==3.5.2 (from -r requirements.txt (line 3))
-2026-11-04T02:01:24.8870351Z   Downloading charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
-2026-11-04T02:01:24.9365736Z Collecting Django==6.1.3 (from -r requirements.txt (line 4))
-2026-11-04T02:01:24.9479088Z   Downloading django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
-2026-11-04T02:01:24.9664525Z Collecting idna==3.20 (from -r requirements.txt (line 5))
-2026-11-04T02:01:24.9765630Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
-2026-11-04T02:01:24.9993402Z Collecting requests==2.34.2 (from -r requirements.txt (line 6))
-2026-11-04T02:01:25.0130933Z   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
-2026-11-04T02:01:25.0303522Z Collecting sqlparse==0.6.1 (from -r requirements.txt (line 7))
-2026-11-04T02:01:25.0404822Z   Downloading sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
-2026-11-04T02:01:25.0608893Z Collecting tzdata==2026.6 (from -r requirements.txt (line 8))
-2026-11-04T02:01:25.0711114Z   Downloading tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
-2026-11-04T02:01:25.0942984Z Collecting urllib3==2.8.0 (from -r requirements.txt (line 9))
-2026-11-04T02:01:25.1046070Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
-2026-11-04T02:01:25.1228608Z Collecting vaderSentiment==3.3.2 (from -r requirements.txt (line 10))
-2026-11-04T02:01:25.1334734Z   Downloading vaderSentiment-3.3.2-py2.py3-none-any.whl.metadata (572 bytes)
-2026-11-04T02:01:25.1505789Z Downloading asgiref-3.13.0-py3-none-any.whl (27 kB)
-2026-11-04T02:01:25.1769675Z Downloading certifi-2026.10.23-py3-none-any.whl (135 kB)
-2026-11-04T02:01:25.1983378Z Downloading charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (255 kB)
-2026-11-04T02:01:25.2245536Z Downloading django-6.1.3-py3-none-any.whl (8.4 MB)
-2026-11-04T02:01:25.3194322Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 89.4 MB/s  0:00:00
-2026-11-04T02:01:25.3295689Z Downloading idna-3.20-py3-none-any.whl (69 kB)
-2026-11-04T02:01:25.3411449Z Downloading requests-2.34.2-py3-none-any.whl (73 kB)
-2026-11-04T02:01:25.3527600Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
-2026-11-04T02:01:25.3656486Z Downloading sqlparse-0.6.1-py3-none-any.whl (51 kB)
-2026-11-04T02:01:25.3772084Z Downloading tzdata-2026.6-py2.py3-none-any.whl (348 kB)
-2026-11-04T02:01:25.3914409Z Downloading vaderSentiment-3.3.2-py2.py3-none-any.whl (125 kB)
-2026-11-04T02:01:25.6023541Z Installing collected packages: urllib3, tzdata, sqlparse, idna, charset-normalizer, certifi, asgiref, requests, Django, vaderSentiment
-2026-11-04T02:01:27.7064559Z 
-2026-11-04T02:01:27.7077723Z Successfully installed Django-6.1.3 asgiref-3.13.0 certifi-2026.10.23 charset-normalizer-3.5.2 idna-3.20 requests-2.34.2 sqlparse-0.6.1 tzdata-2026.6 urllib3-2.8.0 vaderSentiment-3.3.2
-2026-11-04T02:01:27.7084493Z 
-2026-11-04T02:01:27.7085014Z [notice] A new release of pip is available: 26.2.2 -> 26.3
-2026-11-04T02:01:27.7086732Z [notice] To update, run: pip install --upgrade pip
+﻿========== D:\Descargas\ci-logs\0_React Frontend.txt ==========
+2026-11-04T23:42:11.4486174Z Current runner version: '2.338.2'
+2026-11-04T23:42:11.4510514Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:11.4511564Z Hosted Compute Agent
+2026-11-04T23:42:11.4512168Z Version: 20261021.618
+2026-11-04T23:42:11.4512761Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-04T23:42:11.4513458Z Build Date: 2026-10-21T00:45:21Z
+2026-11-04T23:42:11.4514105Z Worker ID: {587e8a7f-0653-4005-bd49-bcbb73c8e655}
+2026-11-04T23:42:11.4514742Z Region: eastus3
+2026-11-04T23:42:11.4515229Z Cloud: Azure
+2026-11-04T23:42:11.4515761Z ##[endgroup]
+2026-11-04T23:42:11.4517242Z ##[group]Operating System
+2026-11-04T23:42:11.4517857Z Ubuntu
+2026-11-04T23:42:11.4518327Z 24.04.5
+2026-11-04T23:42:11.4518778Z LTS
+2026-11-04T23:42:11.4519271Z ##[endgroup]
+2026-11-04T23:42:11.4519791Z ##[group]Runner Image
+2026-11-04T23:42:11.4520342Z Image: ubuntu-24.04
+2026-11-04T23:42:11.4521067Z Version: 20261025.353.1
+2026-11-04T23:42:11.4522259Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:11.4523665Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-11-04T23:42:11.4524548Z ##[endgroup]
+2026-11-04T23:42:11.4525660Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:11.4527955Z Contents: read
+2026-11-04T23:42:11.4528507Z Metadata: read
+2026-11-04T23:42:11.4529064Z Packages: read
+2026-11-04T23:42:11.4529592Z ##[endgroup]
+2026-11-04T23:42:11.4531922Z Secret source: Actions
+2026-11-04T23:42:11.4532857Z Cache mode: write
+2026-11-04T23:42:11.4533522Z Prepare workflow directory
+2026-11-04T23:42:11.4955198Z Prepare all required actions
+2026-11-04T23:42:11.5026676Z Getting action download info
+2026-11-04T23:42:11.7289343Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:11.8333820Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-04T23:42:11.9920029Z Complete job name: React Frontend
+2026-11-04T23:42:12.0684861Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:12.0686084Z with:
+2026-11-04T23:42:12.0686583Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.0690486Z   token: ***
+2026-11-04T23:42:12.0691139Z   ssh-strict: true
+2026-11-04T23:42:12.0691609Z   ssh-user: git
+2026-11-04T23:42:12.0692130Z   persist-credentials: true
+2026-11-04T23:42:12.0692645Z   clean: true
+2026-11-04T23:42:12.0693135Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:12.0693714Z   fetch-depth: 1
+2026-11-04T23:42:12.0694300Z   fetch-tags: false
+2026-11-04T23:42:12.0695074Z   show-progress: true
+2026-11-04T23:42:12.0695796Z   lfs: false
+2026-11-04T23:42:12.0696552Z   submodules: false
+2026-11-04T23:42:12.0697449Z   set-safe-directory: true
+2026-11-04T23:42:12.0698454Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:12.0700046Z ##[endgroup]
+2026-11-04T23:42:12.3146185Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.3148410Z ##[group]Getting Git version info
+2026-11-04T23:42:12.3149469Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.3151032Z [command]/usr/bin/git version
+2026-11-04T23:42:12.3151824Z git version 2.56.0
+2026-11-04T23:42:12.3153649Z ##[endgroup]
+2026-11-04T23:42:12.3159695Z Temporarily overriding HOME='/home/runner/work/_temp/e3ba2902-5aa3-4ce6-b875-d5c2afb4c94c' before making global git config changes
+2026-11-04T23:42:12.3162807Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:12.3165349Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.3169225Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.3178202Z ##[group]Initializing the repository
+2026-11-04T23:42:12.3182845Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.3265794Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:12.3268070Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:12.3269736Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:12.3271485Z hint: call:
+2026-11-04T23:42:12.3272301Z hint:
+2026-11-04T23:42:12.3273623Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:12.3274976Z hint:
+2026-11-04T23:42:12.3276069Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:12.3277300Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:12.3278108Z hint:
+2026-11-04T23:42:12.3278568Z hint: 	git branch -m <name>
+2026-11-04T23:42:12.3279090Z hint:
+2026-11-04T23:42:12.3279770Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:12.3281240Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:12.3283950Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.3324981Z ##[endgroup]
+2026-11-04T23:42:12.3325972Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:12.3329702Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:12.3359776Z ##[endgroup]
+2026-11-04T23:42:12.3361216Z ##[group]Setting up auth
+2026-11-04T23:42:12.3367372Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:12.3400006Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:12.3701073Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:12.3733729Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:12.3935395Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:12.3970076Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:12.4159000Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:12.4196735Z ##[endgroup]
+2026-11-04T23:42:12.4198436Z ##[group]Fetching the repository
+2026-11-04T23:42:12.4209931Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:12.9357181Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.9358923Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:12.9375089Z ##[endgroup]
+2026-11-04T23:42:12.9383286Z ##[group]Determining the checkout info
+2026-11-04T23:42:12.9385213Z ##[endgroup]
+2026-11-04T23:42:12.9386076Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:12.9420755Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:12.9448171Z ##[group]Checking out the ref
+2026-11-04T23:42:12.9451432Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:12.9665114Z Switched to a new branch 'main'
+2026-11-04T23:42:12.9669449Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:12.9675851Z ##[endgroup]
+2026-11-04T23:42:12.9709706Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:12.9730382Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+2026-11-04T23:42:13.0085115Z ##[group]Run actions/setup-node@v4
+2026-11-04T23:42:13.0086195Z with:
+2026-11-04T23:42:13.0086962Z   node-version: 25
+2026-11-04T23:42:13.0087796Z   cache: npm
+2026-11-04T23:42:13.0088896Z   cache-dependency-path: server/frontend/package-lock.json
+2026-11-04T23:42:13.0090258Z   always-auth: false
+2026-11-04T23:42:13.0091410Z   check-latest: false
+2026-11-04T23:42:13.0101191Z   token: ***
+2026-11-04T23:42:13.0101987Z ##[endgroup]
+2026-11-04T23:42:13.1575831Z Attempting to download 25...
+2026-11-04T23:42:13.1723426Z (node:2311) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:13.1727726Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:13.7204864Z Not found in manifest. Falling back to download directly from Node
+2026-11-04T23:42:13.7673448Z Acquiring 25.9.0 - x64 from https://nodejs.org/dist/v25.9.0/node-v25.9.0-linux-x64.tar.gz
+2026-11-04T23:42:13.9954178Z Extracting ...
+2026-11-04T23:42:14.0057096Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a39269df-1ce7-4e42-9733-9b9bb966250e -f /home/runner/work/_temp/cfbe784b-312c-4d1d-80da-3eeeb67b6220
+2026-11-04T23:42:15.1748501Z Adding to the cache ...
+2026-11-04T23:42:16.3578488Z Done
+2026-11-04T23:42:16.3582374Z ##[group]Environment details
+2026-11-04T23:42:16.5787912Z node: v25.9.0
+2026-11-04T23:42:16.5788428Z npm: 11.12.1
+2026-11-04T23:42:16.5788838Z yarn: 1.22.22
+2026-11-04T23:42:16.5789705Z ##[endgroup]
+2026-11-04T23:42:16.5809191Z [command]/opt/hostedtoolcache/node/25.9.0/x64/bin/npm config get cache
+2026-11-04T23:42:16.6679060Z /home/runner/.npm
+2026-11-04T23:42:16.7718816Z Cache hit for: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+2026-11-04T23:42:16.7820120Z (node:2311) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-04T23:42:17.0810218Z Received 19193230 of 19193230 (100.0%), 78.2 MBs/sec
+2026-11-04T23:42:17.0811102Z Cache Size: ~18 MB (19193230 B)
+2026-11-04T23:42:17.0834869Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2b1cb90b-c91f-492f-9ebf-f356c09b54a1/cache.tzst -P -C /home/runner/work/cars-dealership/cars-dealership --use-compress-program unzstd
+2026-11-04T23:42:17.1277721Z Cache restored successfully
+2026-11-04T23:42:17.1289221Z Cache restored from key: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+2026-11-04T23:42:17.1454784Z ##[group]Run npm ci
+2026-11-04T23:42:17.1455102Z [36;1mnpm ci[0m
+2026-11-04T23:42:17.1474238Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:17.1474542Z ##[endgroup]
+2026-11-04T23:42:18.6208991Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-11-04T23:42:18.8966233Z 
+2026-11-04T23:42:18.8967063Z added 223 packages, and audited 224 packages in 2s
+2026-11-04T23:42:18.8967524Z 
+2026-11-04T23:42:18.8967802Z 114 packages are looking for funding
+2026-11-04T23:42:18.8968332Z   run `npm fund` for details
+2026-11-04T23:42:18.8991286Z 
+2026-11-04T23:42:18.8992180Z found 0 vulnerabilities
+2026-11-04T23:42:18.9256634Z ##[group]Run npm run build
+2026-11-04T23:42:18.9256939Z [36;1mnpm run build[0m
+2026-11-04T23:42:18.9272209Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:18.9272476Z ##[endgroup]
+2026-11-04T23:42:19.0135092Z 
+2026-11-04T23:42:19.0135561Z > frontend@1.0.0 build
+2026-11-04T23:42:19.0135968Z > vite build
+2026-11-04T23:42:19.0136147Z 
+2026-11-04T23:42:19.2053393Z [33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+2026-11-04T23:42:19.2072331Z   - ESM syntax in a file loaded as CommonJS (vite.config.js:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+2026-11-04T23:42:19.2082010Z Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
+2026-11-04T23:42:19.2250357Z [36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+2026-11-04T23:42:19.2410179Z transforming...
+2026-11-04T23:42:19.3170105Z ✓ 24 modules transformed.
+2026-11-04T23:42:19.3357431Z rendering chunks...
+2026-11-04T23:42:19.3697382Z computing gzip size...
+2026-11-04T23:42:19.3736218Z dist/index.html                   0.41 kB │ gzip:  0.28 kB
+2026-11-04T23:42:19.3737007Z dist/assets/index-DJkI1kXl.css    3.66 kB │ gzip:  1.22 kB
+2026-11-04T23:42:19.3737779Z dist/assets/index-DZUlLkq9.js   235.24 kB │ gzip: 73.07 kB
+2026-11-04T23:42:19.3738190Z 
+2026-11-04T23:42:19.3739111Z [32m✓ built in 147ms[39m
+2026-11-04T23:42:19.3966772Z Post job cleanup.
+2026-11-04T23:42:19.5219047Z (node:2410) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:19.5220374Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:19.5223846Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760, not saving cache.
+2026-11-04T23:42:19.5358462Z Post job cleanup.
+2026-11-04T23:42:19.6178898Z [command]/usr/bin/git version
+2026-11-04T23:42:19.6226031Z git version 2.56.0
+2026-11-04T23:42:19.6271546Z Temporarily overriding HOME='/home/runner/work/_temp/7c0df7db-8292-4c88-8355-18d761a754f6' before making global git config changes
+2026-11-04T23:42:19.6273051Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:19.6278866Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:19.6317699Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:19.6456826Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:19.6593750Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:19.6617447Z http.https://github.com/.extraheader
+2026-11-04T23:42:19.6651591Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:19.6671111Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:19.6870389Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:19.6902971Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:19.7248654Z Cleaning up orphan processes
+2026-11-04T23:42:19.7567217Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 
-========== .\ci-logs\Django Backend\5_Check Django configuration.txt ==========
-2026-11-04T02:01:27.7892149Z ##[group]Run python manage.py check
-2026-11-04T02:01:27.7892436Z [36;1mpython manage.py check[0m
-2026-11-04T02:01:27.7911559Z shell: /usr/bin/bash -e {0}
-2026-11-04T02:01:27.7911770Z env:
-2026-11-04T02:01:27.7911989Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:27.7912331Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
-2026-11-04T02:01:27.7912655Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:27.7912953Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:27.7913262Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:27.7913552Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
-2026-11-04T02:01:27.7913806Z ##[endgroup]
-2026-11-04T02:01:28.6871652Z System check identified no issues (0 silenced).
+========== D:\Descargas\ci-logs\1_JavaScript Lint.txt ==========
+2026-11-04T23:42:12.0741332Z Current runner version: '2.338.2'
+2026-11-04T23:42:12.0770138Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:12.0771107Z Hosted Compute Agent
+2026-11-04T23:42:12.0771808Z Version: 20261028.624
+2026-11-04T23:42:12.0772487Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-04T23:42:12.0773286Z Build Date: 2026-10-28T21:51:42Z
+2026-11-04T23:42:12.0774097Z Worker ID: {25888bb3-c9f4-4825-852d-ad87c45c64bf}
+2026-11-04T23:42:12.0774865Z Region: westus2
+2026-11-04T23:42:12.0775415Z Cloud: Azure
+2026-11-04T23:42:12.0776053Z ##[endgroup]
+2026-11-04T23:42:12.0777917Z ##[group]Operating System
+2026-11-04T23:42:12.0778891Z Ubuntu
+2026-11-04T23:42:12.0779432Z 24.04.5
+2026-11-04T23:42:12.0779944Z LTS
+2026-11-04T23:42:12.0780607Z ##[endgroup]
+2026-11-04T23:42:12.0781225Z ##[group]Runner Image
+2026-11-04T23:42:12.0781891Z Image: ubuntu-24.04
+2026-11-04T23:42:12.0782535Z Version: 20261101.360.1
+2026-11-04T23:42:12.0783939Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:12.0785564Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-04T23:42:12.0786600Z ##[endgroup]
+2026-11-04T23:42:12.0788312Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:12.0791091Z Contents: read
+2026-11-04T23:42:12.0791799Z Metadata: read
+2026-11-04T23:42:12.0792381Z Packages: read
+2026-11-04T23:42:12.0793121Z ##[endgroup]
+2026-11-04T23:42:12.0795425Z Secret source: Actions
+2026-11-04T23:42:12.0796535Z Cache mode: write
+2026-11-04T23:42:12.0797260Z Prepare workflow directory
+2026-11-04T23:42:12.1153943Z Prepare all required actions
+2026-11-04T23:42:12.1205091Z Getting action download info
+2026-11-04T23:42:12.4543159Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:12.5415105Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-04T23:42:12.7420598Z Complete job name: JavaScript Lint
+2026-11-04T23:42:12.8402148Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:12.8403140Z with:
+2026-11-04T23:42:12.8403671Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.8408169Z   token: ***
+2026-11-04T23:42:12.8408706Z   ssh-strict: true
+2026-11-04T23:42:12.8409221Z   ssh-user: git
+2026-11-04T23:42:12.8409736Z   persist-credentials: true
+2026-11-04T23:42:12.8410288Z   clean: true
+2026-11-04T23:42:12.8410794Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:12.8411384Z   fetch-depth: 1
+2026-11-04T23:42:12.8411879Z   fetch-tags: false
+2026-11-04T23:42:12.8412327Z   show-progress: true
+2026-11-04T23:42:12.8412774Z   lfs: false
+2026-11-04T23:42:12.8413193Z   submodules: false
+2026-11-04T23:42:12.8413650Z   set-safe-directory: true
+2026-11-04T23:42:12.8414174Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:12.8414985Z ##[endgroup]
+2026-11-04T23:42:13.1184968Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:13.1186774Z ##[group]Getting Git version info
+2026-11-04T23:42:13.1188006Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:13.1189152Z [command]/usr/bin/git version
+2026-11-04T23:42:13.1280838Z git version 2.56.0
+2026-11-04T23:42:13.1311901Z ##[endgroup]
+2026-11-04T23:42:13.1350137Z Temporarily overriding HOME='/home/runner/work/_temp/34f3a093-ca74-443a-a7c6-1f3a8b083a74' before making global git config changes
+2026-11-04T23:42:13.1353401Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:13.1356230Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:13.1456721Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:13.1459695Z ##[group]Initializing the repository
+2026-11-04T23:42:13.1461326Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:13.1578970Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:13.1582598Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:13.1584862Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:13.1586740Z hint: call:
+2026-11-04T23:42:13.1588281Z hint:
+2026-11-04T23:42:13.1590989Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:13.1618846Z hint:
+2026-11-04T23:42:13.1620369Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:13.1622244Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:13.1623705Z hint:
+2026-11-04T23:42:13.1624720Z hint: 	git branch -m <name>
+2026-11-04T23:42:13.1625845Z hint:
+2026-11-04T23:42:13.1627237Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:13.1629627Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:13.1633457Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:13.1706796Z ##[endgroup]
+2026-11-04T23:42:13.1708543Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:13.1710079Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:13.1750374Z ##[endgroup]
+2026-11-04T23:42:13.1752112Z ##[group]Setting up auth
+2026-11-04T23:42:13.1760598Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:13.1832274Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:13.2315180Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:13.2364651Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:13.2615818Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:13.2661208Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:13.2912924Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:13.2964721Z ##[endgroup]
+2026-11-04T23:42:13.2965553Z ##[group]Fetching the repository
+2026-11-04T23:42:13.2977765Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:14.0012525Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:14.0014714Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:14.0018820Z ##[endgroup]
+2026-11-04T23:42:14.0020594Z ##[group]Determining the checkout info
+2026-11-04T23:42:14.0022555Z ##[endgroup]
+2026-11-04T23:42:14.0029086Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:14.0095608Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:14.0138577Z ##[group]Checking out the ref
+2026-11-04T23:42:14.0153437Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:14.0394036Z Switched to a new branch 'main'
+2026-11-04T23:42:14.0400069Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:14.0406866Z ##[endgroup]
+2026-11-04T23:42:14.0460597Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:14.0495904Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+2026-11-04T23:42:14.0853252Z ##[group]Run actions/setup-node@v4
+2026-11-04T23:42:14.0854069Z with:
+2026-11-04T23:42:14.0854535Z   node-version: 25
+2026-11-04T23:42:14.0855096Z   cache: npm
+2026-11-04T23:42:14.0855862Z   cache-dependency-path: server/frontend/package-lock.json
+2026-11-04T23:42:14.0856927Z   always-auth: false
+2026-11-04T23:42:14.0857941Z   check-latest: false
+2026-11-04T23:42:14.0868001Z   token: ***
+2026-11-04T23:42:14.0868508Z ##[endgroup]
+2026-11-04T23:42:14.2384298Z Attempting to download 25...
+2026-11-04T23:42:14.2542452Z (node:2552) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:14.2548321Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:15.0516444Z Not found in manifest. Falling back to download directly from Node
+2026-11-04T23:42:15.1039346Z Acquiring 25.9.0 - x64 from https://nodejs.org/dist/v25.9.0/node-v25.9.0-linux-x64.tar.gz
+2026-11-04T23:42:15.3966466Z Extracting ...
+2026-11-04T23:42:15.4099054Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8a003023-743c-4ef5-8891-b91ddc359121 -f /home/runner/work/_temp/af24036f-e93a-4e3c-95e4-c3c29d6cdf2c
+2026-11-04T23:42:16.6198641Z Adding to the cache ...
+2026-11-04T23:42:18.2721431Z Done
+2026-11-04T23:42:18.2725970Z ##[group]Environment details
+2026-11-04T23:42:18.5208677Z node: v25.9.0
+2026-11-04T23:42:18.5209147Z npm: 11.12.1
+2026-11-04T23:42:18.5209501Z yarn: 1.22.22
+2026-11-04T23:42:18.5210193Z ##[endgroup]
+2026-11-04T23:42:18.5235315Z [command]/opt/hostedtoolcache/node/25.9.0/x64/bin/npm config get cache
+2026-11-04T23:42:18.6201987Z /home/runner/.npm
+2026-11-04T23:42:18.8534224Z Cache hit for: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+2026-11-04T23:42:18.8638809Z (node:2552) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-04T23:42:20.1549211Z Received 10804622 of 19193230 (56.3%), 10.3 MBs/sec
+2026-11-04T23:42:20.2376793Z Received 19193230 of 19193230 (100.0%), 16.9 MBs/sec
+2026-11-04T23:42:20.2378086Z Cache Size: ~18 MB (19193230 B)
+2026-11-04T23:42:20.2404165Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2a03c80a-e50e-4dc0-90fc-7c729c94bd59/cache.tzst -P -C /home/runner/work/cars-dealership/cars-dealership --use-compress-program unzstd
+2026-11-04T23:42:20.3266146Z Cache restored successfully
+2026-11-04T23:42:20.3281925Z Cache restored from key: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+2026-11-04T23:42:20.3526028Z ##[group]Run npm ci
+2026-11-04T23:42:20.3526333Z [36;1mnpm ci[0m
+2026-11-04T23:42:20.3552564Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:20.3552851Z ##[endgroup]
+2026-11-04T23:42:22.0845508Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-11-04T23:42:22.4643238Z 
+2026-11-04T23:42:22.4644444Z added 223 packages, and audited 224 packages in 2s
+2026-11-04T23:42:22.4644981Z 
+2026-11-04T23:42:22.4648185Z 114 packages are looking for funding
+2026-11-04T23:42:22.4648821Z   run `npm fund` for details
+2026-11-04T23:42:22.4656032Z 
+2026-11-04T23:42:22.4656591Z found 0 vulnerabilities
+2026-11-04T23:42:22.5187984Z ##[group]Run npm run lint
+2026-11-04T23:42:22.5188351Z [36;1mnpm run lint[0m
+2026-11-04T23:42:22.5213862Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:22.5214143Z ##[endgroup]
+2026-11-04T23:42:22.6193977Z 
+2026-11-04T23:42:22.6194588Z > frontend@1.0.0 lint
+2026-11-04T23:42:22.6195076Z > eslint src
+2026-11-04T23:42:22.6195243Z 
+2026-11-04T23:42:23.2783857Z Post job cleanup.
+2026-11-04T23:42:23.4093963Z (node:2645) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:23.4095138Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:23.4098836Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760, not saving cache.
+2026-11-04T23:42:23.4258725Z Post job cleanup.
+2026-11-04T23:42:23.5142279Z [command]/usr/bin/git version
+2026-11-04T23:42:23.5221980Z git version 2.56.0
+2026-11-04T23:42:23.5263688Z Temporarily overriding HOME='/home/runner/work/_temp/38f1035a-f53f-47e5-a4ac-57877d725d31' before making global git config changes
+2026-11-04T23:42:23.5265160Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:23.5272619Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:23.5318570Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:23.5358995Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:23.5657075Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:23.5703566Z http.https://github.com/.extraheader
+2026-11-04T23:42:23.5731095Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:23.5784784Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:23.6188388Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:23.6227027Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:23.6658249Z Cleaning up orphan processes
+2026-11-04T23:42:23.7106018Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 
-========== .\ci-logs\Django Backend\6_Check migrations.txt ==========
-2026-11-04T02:01:28.7320213Z ##[group]Run python manage.py makemigrations --check --dry-run
-2026-11-04T02:01:28.7320626Z [36;1mpython manage.py makemigrations --check --dry-run[0m
-2026-11-04T02:01:28.7338826Z shell: /usr/bin/bash -e {0}
-2026-11-04T02:01:28.7339037Z env:
-2026-11-04T02:01:28.7339255Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:28.7339594Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
-2026-11-04T02:01:28.7339943Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:28.7340234Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:28.7340522Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:28.7340811Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
-2026-11-04T02:01:28.7341064Z ##[endgroup]
-2026-11-04T02:01:28.9483444Z No changes detected
+========== D:\Descargas\ci-logs\2_Django Backend.txt ==========
+2026-11-04T23:42:11.2390571Z Current runner version: '2.338.2'
+2026-11-04T23:42:11.2409133Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:11.2409721Z Hosted Compute Agent
+2026-11-04T23:42:11.2410125Z Version: 20261028.624
+2026-11-04T23:42:11.2410758Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-04T23:42:11.2411235Z Build Date: 2026-10-28T21:51:42Z
+2026-11-04T23:42:11.2411638Z Worker ID: {8a4a7049-bb9b-4610-b257-32d03b4b37f3}
+2026-11-04T23:42:11.2412115Z Region: centralus
+2026-11-04T23:42:11.2412478Z Cloud: Azure
+2026-11-04T23:42:11.2412824Z ##[endgroup]
+2026-11-04T23:42:11.2413713Z ##[group]Operating System
+2026-11-04T23:42:11.2414079Z Ubuntu
+2026-11-04T23:42:11.2414421Z 24.04.5
+2026-11-04T23:42:11.2414779Z LTS
+2026-11-04T23:42:11.2415088Z ##[endgroup]
+2026-11-04T23:42:11.2415458Z ##[group]Runner Image
+2026-11-04T23:42:11.2415856Z Image: ubuntu-24.04
+2026-11-04T23:42:11.2416222Z Version: 20261101.360.1
+2026-11-04T23:42:11.2416988Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:11.2417879Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-04T23:42:11.2418461Z ##[endgroup]
+2026-11-04T23:42:11.2419211Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:11.2420786Z Contents: read
+2026-11-04T23:42:11.2421440Z Metadata: read
+2026-11-04T23:42:11.2421802Z Packages: read
+2026-11-04T23:42:11.2422136Z ##[endgroup]
+2026-11-04T23:42:11.2423589Z Secret source: Actions
+2026-11-04T23:42:11.2424204Z Cache mode: write
+2026-11-04T23:42:11.2424698Z Prepare workflow directory
+2026-11-04T23:42:11.2643813Z Prepare all required actions
+2026-11-04T23:42:11.2674904Z Getting action download info
+2026-11-04T23:42:11.4744861Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:11.5852926Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-04T23:42:11.7425324Z Complete job name: Django Backend
+2026-11-04T23:42:11.7947061Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:11.7947507Z with:
+2026-11-04T23:42:11.7947750Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:11.7949710Z   token: ***
+2026-11-04T23:42:11.7949937Z   ssh-strict: true
+2026-11-04T23:42:11.7950167Z   ssh-user: git
+2026-11-04T23:42:11.7950526Z   persist-credentials: true
+2026-11-04T23:42:11.7950782Z   clean: true
+2026-11-04T23:42:11.7951020Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:11.7951299Z   fetch-depth: 1
+2026-11-04T23:42:11.7951531Z   fetch-tags: false
+2026-11-04T23:42:11.7951766Z   show-progress: true
+2026-11-04T23:42:11.7952003Z   lfs: false
+2026-11-04T23:42:11.7952221Z   submodules: false
+2026-11-04T23:42:11.7952460Z   set-safe-directory: true
+2026-11-04T23:42:11.7952729Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:11.7953086Z ##[endgroup]
+2026-11-04T23:42:11.9727562Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:11.9729115Z ##[group]Getting Git version info
+2026-11-04T23:42:11.9729817Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:11.9730936Z [command]/usr/bin/git version
+2026-11-04T23:42:11.9786834Z git version 2.56.0
+2026-11-04T23:42:11.9800030Z ##[endgroup]
+2026-11-04T23:42:11.9811497Z Temporarily overriding HOME='/home/runner/work/_temp/7fcc7347-1f05-4626-8dd2-5d1b334a1fc2' before making global git config changes
+2026-11-04T23:42:11.9813178Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:11.9815851Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:11.9881463Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:11.9882871Z ##[group]Initializing the repository
+2026-11-04T23:42:11.9883663Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:11.9944355Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:11.9945672Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:11.9946451Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:11.9946920Z hint: call:
+2026-11-04T23:42:11.9947146Z hint:
+2026-11-04T23:42:11.9947446Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:11.9947769Z hint:
+2026-11-04T23:42:11.9948077Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:11.9948720Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:11.9949101Z hint:
+2026-11-04T23:42:11.9949337Z hint: 	git branch -m <name>
+2026-11-04T23:42:11.9949583Z hint:
+2026-11-04T23:42:11.9949908Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:11.9954776Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:11.9964984Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.0006704Z ##[endgroup]
+2026-11-04T23:42:12.0007276Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:12.0010616Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:12.0041617Z ##[endgroup]
+2026-11-04T23:42:12.0042248Z ##[group]Setting up auth
+2026-11-04T23:42:12.0047500Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:12.0081592Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:12.0384586Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:12.0422824Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:12.0614140Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:12.0651630Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:12.0841070Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:12.0953873Z ##[endgroup]
+2026-11-04T23:42:12.0954592Z ##[group]Fetching the repository
+2026-11-04T23:42:12.0963741Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:12.6539647Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.6540703Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:12.6542569Z ##[endgroup]
+2026-11-04T23:42:12.6543279Z ##[group]Determining the checkout info
+2026-11-04T23:42:12.6545191Z ##[endgroup]
+2026-11-04T23:42:12.6549040Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:12.6599268Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:12.6632736Z ##[group]Checking out the ref
+2026-11-04T23:42:12.6636008Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:12.6818496Z Switched to a new branch 'main'
+2026-11-04T23:42:12.6820945Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:12.6826088Z ##[endgroup]
+2026-11-04T23:42:12.6870034Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:12.6900900Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+2026-11-04T23:42:12.7109974Z ##[group]Run actions/setup-python@v5
+2026-11-04T23:42:12.7110508Z with:
+2026-11-04T23:42:12.7110776Z   python-version: 3.14
+2026-11-04T23:42:12.7111018Z   cache: pip
+2026-11-04T23:42:12.7111377Z   cache-dependency-path: server/requirements.txt
+2026-11-04T23:42:12.7111815Z   check-latest: false
+2026-11-04T23:42:12.7113951Z   token: ***
+2026-11-04T23:42:12.7114184Z   update-environment: true
+2026-11-04T23:42:12.7114448Z   allow-prereleases: false
+2026-11-04T23:42:12.7114699Z   freethreaded: false
+2026-11-04T23:42:12.7114935Z ##[endgroup]
+2026-11-04T23:42:12.8040744Z ##[group]Installed versions
+2026-11-04T23:42:12.8099282Z (node:2099) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:12.8100195Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:12.8100833Z Successfully set up CPython (3.14.10)
+2026-11-04T23:42:12.8101323Z ##[endgroup]
+2026-11-04T23:42:12.8448623Z [command]/opt/hostedtoolcache/Python/3.14.10/x64/bin/pip cache dir
+2026-11-04T23:42:14.5986552Z /home/runner/.cache/pip
+2026-11-04T23:42:14.7779535Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.10-pip-9e78107891fe76e4f02f4436208a590a88266b546437cac31b12d9c49ca40d56
+2026-11-04T23:42:14.7860080Z (node:2099) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-04T23:42:15.5359056Z Received 15733276 of 15733276 (100.0%), 26.3 MBs/sec
+2026-11-04T23:42:15.5376788Z Cache Size: ~15 MB (15733276 B)
+2026-11-04T23:42:15.5377641Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2bb53969-4861-442e-9a7c-83e21cf98818/cache.tzst -P -C /home/runner/work/cars-dealership/cars-dealership --use-compress-program unzstd
+2026-11-04T23:42:15.5662671Z Cache restored successfully
+2026-11-04T23:42:15.5725966Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.10-pip-9e78107891fe76e4f02f4436208a590a88266b546437cac31b12d9c49ca40d56
+2026-11-04T23:42:15.5869712Z ##[group]Run pip install -r requirements.txt
+2026-11-04T23:42:15.5869983Z [36;1mpip install -r requirements.txt[0m
+2026-11-04T23:42:15.5891238Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:15.5891438Z env:
+2026-11-04T23:42:15.5891601Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5891850Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:15.5892111Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5892343Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5892562Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5892778Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:15.5892968Z ##[endgroup]
+2026-11-04T23:42:16.7230236Z Collecting asgiref==3.13.0 (from -r requirements.txt (line 1))
+2026-11-04T23:42:16.7240996Z   Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+2026-11-04T23:42:16.7524999Z Collecting certifi==2026.10.23 (from -r requirements.txt (line 2))
+2026-11-04T23:42:16.7533325Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-04T23:42:16.8238453Z Collecting charset-normalizer==3.5.2 (from -r requirements.txt (line 3))
+2026-11-04T23:42:16.8247734Z   Using cached charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-11-04T23:42:16.8454397Z Collecting dj-database-url==3.1.2 (from -r requirements.txt (line 4))
+2026-11-04T23:42:16.8464597Z   Using cached dj_database_url-3.1.2-py3-none-any.whl.metadata (13 kB)
+2026-11-04T23:42:16.8792451Z Collecting Django==6.1.3 (from -r requirements.txt (line 5))
+2026-11-04T23:42:16.8800973Z   Using cached django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+2026-11-04T23:42:16.9010666Z Collecting gunicorn==26.2.0 (from -r requirements.txt (line 6))
+2026-11-04T23:42:16.9018401Z   Using cached gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+2026-11-04T23:42:16.9225957Z Collecting idna==3.20 (from -r requirements.txt (line 7))
+2026-11-04T23:42:16.9233253Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-04T23:42:16.9447113Z Collecting psycopg==3.3.8 (from -r requirements.txt (line 8))
+2026-11-04T23:42:16.9455202Z   Using cached psycopg-3.3.8-py3-none-any.whl.metadata (4.4 kB)
+2026-11-04T23:42:17.0334080Z Collecting psycopg-binary==3.3.8 (from -r requirements.txt (line 9))
+2026-11-04T23:42:17.0343765Z   Using cached psycopg_binary-3.3.8-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+2026-11-04T23:42:17.0706314Z Collecting requests==2.34.2 (from -r requirements.txt (line 10))
+2026-11-04T23:42:17.0714011Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-11-04T23:42:17.0903668Z Collecting sqlparse==0.6.1 (from -r requirements.txt (line 11))
+2026-11-04T23:42:17.0911061Z   Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+2026-11-04T23:42:17.1103329Z Collecting tzdata==2026.6 (from -r requirements.txt (line 12))
+2026-11-04T23:42:17.1110394Z   Using cached tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-11-04T23:42:17.1330239Z Collecting urllib3==2.8.0 (from -r requirements.txt (line 13))
+2026-11-04T23:42:17.1337545Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-04T23:42:17.1723573Z Collecting vaderSentiment==3.3.2 (from -r requirements.txt (line 14))
+2026-11-04T23:42:17.1731656Z   Using cached vaderSentiment-3.3.2-py2.py3-none-any.whl.metadata (572 bytes)
+2026-11-04T23:42:17.1934885Z Collecting whitenoise==6.12.0 (from -r requirements.txt (line 15))
+2026-11-04T23:42:17.1941985Z   Using cached whitenoise-6.12.0-py3-none-any.whl.metadata (3.7 kB)
+2026-11-04T23:42:17.2010699Z Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+2026-11-04T23:42:17.2017246Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-04T23:42:17.2024328Z Using cached charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (255 kB)
+2026-11-04T23:42:17.2030574Z Using cached dj_database_url-3.1.2-py3-none-any.whl (9.0 kB)
+2026-11-04T23:42:17.2036534Z Using cached django-6.1.3-py3-none-any.whl (8.4 MB)
+2026-11-04T23:42:17.2062024Z Using cached gunicorn-26.2.0-py3-none-any.whl (228 kB)
+2026-11-04T23:42:17.2068357Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+2026-11-04T23:42:17.2074684Z Using cached psycopg-3.3.8-py3-none-any.whl (216 kB)
+2026-11-04T23:42:17.2083775Z Using cached psycopg_binary-3.3.8-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+2026-11-04T23:42:17.2104175Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+2026-11-04T23:42:17.2110763Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-11-04T23:42:17.2117068Z Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+2026-11-04T23:42:17.2123565Z Using cached tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+2026-11-04T23:42:17.2130645Z Using cached vaderSentiment-3.3.2-py2.py3-none-any.whl (125 kB)
+2026-11-04T23:42:17.2136990Z Using cached whitenoise-6.12.0-py3-none-any.whl (20 kB)
+2026-11-04T23:42:17.4103080Z Installing collected packages: whitenoise, urllib3, tzdata, sqlparse, psycopg-binary, psycopg, idna, gunicorn, charset-normalizer, certifi, asgiref, requests, Django, vaderSentiment, dj-database-url
+2026-11-04T23:42:19.2606299Z 
+2026-11-04T23:42:19.2630911Z 
+2026-11-04T23:42:19.2631980Z Successfully installed Django-6.1.3 asgiref-3.13.0 certifi-2026.10.23 charset-normalizer-3.5.2 dj-database-url-3.1.2 gunicorn-26.2.0 idna-3.20 psycopg-3.3.8 psycopg-binary-3.3.8 requests-2.34.2 sqlparse-0.6.1 tzdata-2026.6 urllib3-2.8.0 vaderSentiment-3.3.2 whitenoise-6.12.0
+2026-11-04T23:42:19.2632966Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-04T23:42:19.2633184Z [notice] To update, run: pip install --upgrade pip
+2026-11-04T23:42:19.3451432Z ##[group]Run python manage.py check
+2026-11-04T23:42:19.3451632Z [36;1mpython manage.py check[0m
+2026-11-04T23:42:19.3468062Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:19.3468195Z env:
+2026-11-04T23:42:19.3468344Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3468574Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:19.3468940Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3469144Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3469419Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3469629Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:19.3469811Z ##[endgroup]
+2026-11-04T23:42:20.3255902Z System check identified some issues:
+2026-11-04T23:42:20.3256161Z 
+2026-11-04T23:42:20.3256295Z WARNINGS:
+2026-11-04T23:42:20.3256918Z ?: (staticfiles.W004) The directory '/home/runner/work/cars-dealership/cars-dealership/server/frontend/dist' in the STATICFILES_DIRS setting does not exist.
+2026-11-04T23:42:20.3257409Z 
+2026-11-04T23:42:20.3257518Z System check identified 1 issue (0 silenced).
+2026-11-04T23:42:20.3812473Z ##[group]Run python manage.py makemigrations --check --dry-run
+2026-11-04T23:42:20.3812759Z [36;1mpython manage.py makemigrations --check --dry-run[0m
+2026-11-04T23:42:20.3828741Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:20.3828894Z env:
+2026-11-04T23:42:20.3829048Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3829276Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:20.3829501Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3829708Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3829914Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3830118Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:20.3830294Z ##[endgroup]
+2026-11-04T23:42:20.5517872Z System check identified some issues:
+2026-11-04T23:42:20.5518088Z 
+2026-11-04T23:42:20.5518140Z WARNINGS:
+2026-11-04T23:42:20.5518586Z ?: (staticfiles.W004) The directory '/home/runner/work/cars-dealership/cars-dealership/server/frontend/dist' in the STATICFILES_DIRS setting does not exist.
+2026-11-04T23:42:20.5592306Z No changes detected
+2026-11-04T23:42:20.6159419Z ##[group]Run python manage.py test
+2026-11-04T23:42:20.6159613Z [36;1mpython manage.py test[0m
+2026-11-04T23:42:20.6175682Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:20.6175817Z env:
+2026-11-04T23:42:20.6175961Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6176187Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:20.6176410Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6176612Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6176818Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6177026Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:20.6177201Z ##[endgroup]
+2026-11-04T23:42:21.1922581Z System check identified some issues:
+2026-11-04T23:42:21.1922848Z 
+2026-11-04T23:42:21.1922931Z WARNINGS:
+2026-11-04T23:42:21.1923556Z ?: (staticfiles.W004) The directory '/home/runner/work/cars-dealership/cars-dealership/server/frontend/dist' in the STATICFILES_DIRS setting does not exist.
+2026-11-04T23:42:21.1924052Z 
+2026-11-04T23:42:21.1924171Z System check identified 1 issue (0 silenced).
+2026-11-04T23:42:21.1924348Z 
+2026-11-04T23:42:21.1924478Z ----------------------------------------------------------------------
+2026-11-04T23:42:21.1924793Z Ran 0 tests in 0.000s
+2026-11-04T23:42:21.1924905Z 
+2026-11-04T23:42:21.1924976Z NO TESTS RAN
+2026-11-04T23:42:21.1925152Z Found 0 test(s).
+2026-11-04T23:42:21.2675857Z Post job cleanup.
+2026-11-04T23:42:21.3487214Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.14.10-pip-9e78107891fe76e4f02f4436208a590a88266b546437cac31b12d9c49ca40d56, not saving cache.
+2026-11-04T23:42:21.3488105Z (node:2175) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:21.3488464Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:21.3610014Z Post job cleanup.
+2026-11-04T23:42:21.4188670Z [command]/usr/bin/git version
+2026-11-04T23:42:21.4225023Z git version 2.56.0
+2026-11-04T23:42:21.4251365Z Temporarily overriding HOME='/home/runner/work/_temp/0fdab0fb-e932-4d0b-a2b2-b2be5c9c78ca' before making global git config changes
+2026-11-04T23:42:21.4251981Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:21.4261068Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:21.4299670Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:21.4331670Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:21.4551409Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:21.4581805Z http.https://github.com/.extraheader
+2026-11-04T23:42:21.4590917Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:21.4630215Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:21.4860689Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:21.4900664Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:21.5230284Z Cleaning up orphan processes
+2026-11-04T23:42:21.5478207Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 
-========== .\ci-logs\Django Backend\7_Run Django tests.txt ==========
-2026-11-04T02:01:29.0003794Z ##[group]Run python manage.py test
-2026-11-04T02:01:29.0004063Z [36;1mpython manage.py test[0m
-2026-11-04T02:01:29.0022327Z shell: /usr/bin/bash -e {0}
-2026-11-04T02:01:29.0022532Z env:
-2026-11-04T02:01:29.0022748Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:29.0023083Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
-2026-11-04T02:01:29.0023408Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:29.0023700Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:29.0023986Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
-2026-11-04T02:01:29.0024273Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
-2026-11-04T02:01:29.0024524Z ##[endgroup]
-2026-11-04T02:01:29.6326055Z 
-2026-11-04T02:01:29.6326584Z ----------------------------------------------------------------------
-2026-11-04T02:01:29.6327207Z Ran 0 tests in 0.000s
-2026-11-04T02:01:29.6327363Z 
-2026-11-04T02:01:29.6327462Z NO TESTS RAN
-2026-11-04T02:01:29.6327787Z Found 0 test(s).
-2026-11-04T02:01:29.6328070Z System check identified no issues (0 silenced).
+========== D:\Descargas\ci-logs\3_Python Lint.txt ==========
+2026-11-04T23:42:11.5470824Z Current runner version: '2.338.2'
+2026-11-04T23:42:11.5497123Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:11.5498149Z Hosted Compute Agent
+2026-11-04T23:42:11.5498962Z Version: 20261021.618
+2026-11-04T23:42:11.5499724Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-04T23:42:11.5500549Z Build Date: 2026-10-21T00:45:21Z
+2026-11-04T23:42:11.5501271Z Worker ID: {5a129fb7-90d9-41fb-be92-48fd55d1284a}
+2026-11-04T23:42:11.5502124Z Region: southcentralus
+2026-11-04T23:42:11.5502822Z Cloud: Azure
+2026-11-04T23:42:11.5503467Z ##[endgroup]
+2026-11-04T23:42:11.5504934Z ##[group]Operating System
+2026-11-04T23:42:11.5505591Z Ubuntu
+2026-11-04T23:42:11.5506269Z 24.04.5
+2026-11-04T23:42:11.5506848Z LTS
+2026-11-04T23:42:11.5507448Z ##[endgroup]
+2026-11-04T23:42:11.5508116Z ##[group]Runner Image
+2026-11-04T23:42:11.5508965Z Image: ubuntu-24.04
+2026-11-04T23:42:11.5509703Z Version: 20261025.353.1
+2026-11-04T23:42:11.5511060Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:11.5512750Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-11-04T23:42:11.5513773Z ##[endgroup]
+2026-11-04T23:42:11.5515112Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:11.5517412Z Contents: read
+2026-11-04T23:42:11.5518239Z Metadata: read
+2026-11-04T23:42:11.5519049Z Packages: read
+2026-11-04T23:42:11.5520006Z ##[endgroup]
+2026-11-04T23:42:11.5522172Z Secret source: Actions
+2026-11-04T23:42:11.5523268Z Cache mode: write
+2026-11-04T23:42:11.5524079Z Prepare workflow directory
+2026-11-04T23:42:11.5867572Z Prepare all required actions
+2026-11-04T23:42:11.5915877Z Getting action download info
+2026-11-04T23:42:11.8714017Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:12.0016037Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-04T23:42:12.2441415Z Complete job name: Python Lint
+2026-11-04T23:42:12.3287133Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:12.3287975Z with:
+2026-11-04T23:42:12.3288454Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.3292481Z   token: ***
+2026-11-04T23:42:12.3292957Z   ssh-strict: true
+2026-11-04T23:42:12.3293421Z   ssh-user: git
+2026-11-04T23:42:12.3293885Z   persist-credentials: true
+2026-11-04T23:42:12.3294392Z   clean: true
+2026-11-04T23:42:12.3294855Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:12.3295385Z   fetch-depth: 1
+2026-11-04T23:42:12.3295830Z   fetch-tags: false
+2026-11-04T23:42:12.3296286Z   show-progress: true
+2026-11-04T23:42:12.3296748Z   lfs: false
+2026-11-04T23:42:12.3297176Z   submodules: false
+2026-11-04T23:42:12.3297636Z   set-safe-directory: true
+2026-11-04T23:42:12.3298157Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:12.3299013Z ##[endgroup]
+2026-11-04T23:42:12.5406778Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.5409460Z ##[group]Getting Git version info
+2026-11-04T23:42:12.5410396Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.5412029Z [command]/usr/bin/git version
+2026-11-04T23:42:12.5477346Z git version 2.56.0
+2026-11-04T23:42:12.5500703Z ##[endgroup]
+2026-11-04T23:42:12.5517966Z Temporarily overriding HOME='/home/runner/work/_temp/4082424b-e0c3-46ee-a4bd-c52b48df656c' before making global git config changes
+2026-11-04T23:42:12.5521027Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:12.5525523Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.5576915Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.5581970Z ##[group]Initializing the repository
+2026-11-04T23:42:12.5587112Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.5668598Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:12.5671935Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:12.5673575Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:12.5674924Z hint: call:
+2026-11-04T23:42:12.5675651Z hint:
+2026-11-04T23:42:12.5676532Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:12.5677628Z hint:
+2026-11-04T23:42:12.5678639Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:12.5680501Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:12.5681843Z hint:
+2026-11-04T23:42:12.5682579Z hint: 	git branch -m <name>
+2026-11-04T23:42:12.5683427Z hint:
+2026-11-04T23:42:12.5684556Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:12.5686782Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:12.5690969Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.5736628Z ##[endgroup]
+2026-11-04T23:42:12.5737827Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:12.5741584Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:12.5779166Z ##[endgroup]
+2026-11-04T23:42:12.5780261Z ##[group]Setting up auth
+2026-11-04T23:42:12.5786667Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:12.5827968Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:12.6233100Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:12.6276297Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:12.6579886Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:12.6617639Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:12.6885569Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:12.6938196Z ##[endgroup]
+2026-11-04T23:42:12.6939330Z ##[group]Fetching the repository
+2026-11-04T23:42:12.6950527Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:13.4029121Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:13.4031409Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:13.4035140Z ##[endgroup]
+2026-11-04T23:42:13.4036842Z ##[group]Determining the checkout info
+2026-11-04T23:42:13.4038566Z ##[endgroup]
+2026-11-04T23:42:13.4045166Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:13.4109088Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:13.4153618Z ##[group]Checking out the ref
+2026-11-04T23:42:13.4167702Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:13.4421057Z Switched to a new branch 'main'
+2026-11-04T23:42:13.4424861Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:13.4431559Z ##[endgroup]
+2026-11-04T23:42:13.4485333Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:13.4522139Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+2026-11-04T23:42:13.4924560Z ##[group]Run actions/setup-python@v5
+2026-11-04T23:42:13.4925934Z with:
+2026-11-04T23:42:13.4926940Z   python-version: 3.14
+2026-11-04T23:42:13.4928085Z   check-latest: false
+2026-11-04T23:42:13.4938009Z   token: ***
+2026-11-04T23:42:13.4939177Z   update-environment: true
+2026-11-04T23:42:13.4940621Z   allow-prereleases: false
+2026-11-04T23:42:13.4941868Z   freethreaded: false
+2026-11-04T23:42:13.4942967Z ##[endgroup]
+2026-11-04T23:42:13.6363085Z ##[group]Installed versions
+2026-11-04T23:42:13.6444934Z (node:2290) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:13.6447614Z Successfully set up CPython (3.14.9)
+2026-11-04T23:42:13.6450062Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:13.6452592Z ##[endgroup]
+2026-11-04T23:42:13.6664670Z ##[group]Run python -m pip install ruff
+2026-11-04T23:42:13.6666133Z [36;1mpython -m pip install ruff[0m
+2026-11-04T23:42:13.6703731Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:13.6704849Z env:
+2026-11-04T23:42:13.6705971Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6707702Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T23:42:13.6709765Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6711390Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6712995Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6714596Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T23:42:13.6715969Z ##[endgroup]
+2026-11-04T23:42:14.7717903Z Collecting ruff
+2026-11-04T23:42:14.8451113Z   Downloading ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-11-04T23:42:14.8686347Z Downloading ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)
+2026-11-04T23:42:14.9720582Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 140.8 MB/s  0:00:00
+2026-11-04T23:42:15.0210064Z Installing collected packages: ruff
+2026-11-04T23:42:15.1800696Z Successfully installed ruff-0.17.3
+2026-11-04T23:42:15.1811311Z 
+2026-11-04T23:42:15.1811903Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-04T23:42:15.1813028Z [notice] To update, run: pip install --upgrade pip
+2026-11-04T23:42:15.2778093Z ##[group]Run ruff check server --select E4,E7,E9,F63,F7,F82
+2026-11-04T23:42:15.2778623Z [36;1mruff check server --select E4,E7,E9,F63,F7,F82[0m
+2026-11-04T23:42:15.2802866Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:15.2803181Z env:
+2026-11-04T23:42:15.2803510Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2804007Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T23:42:15.2804498Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2804932Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2805356Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2805790Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T23:42:15.2806193Z ##[endgroup]
+2026-11-04T23:42:15.2940638Z All checks passed!
+2026-11-04T23:42:15.3110618Z Post job cleanup.
+2026-11-04T23:42:15.4404626Z (node:2340) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:15.4405573Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:15.4652489Z Post job cleanup.
+2026-11-04T23:42:15.5576840Z [command]/usr/bin/git version
+2026-11-04T23:42:15.5624253Z git version 2.56.0
+2026-11-04T23:42:15.5665789Z Temporarily overriding HOME='/home/runner/work/_temp/1d8acd2a-6e68-4bf1-9bc5-9f176146bba2' before making global git config changes
+2026-11-04T23:42:15.5666844Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:15.5672046Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:15.5720600Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:15.5841128Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:15.6121006Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:15.6150244Z http.https://github.com/.extraheader
+2026-11-04T23:42:15.6152154Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:15.6191682Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:15.6557240Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:15.6626556Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:15.7103444Z Cleaning up orphan processes
+2026-11-04T23:42:15.7487224Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
 
-========== .\ci-logs\React Frontend\4_Install frontend dependencies.txt ==========
-2026-11-04T02:01:26.4292021Z ##[group]Run npm ci
-2026-11-04T02:01:26.4292383Z [36;1mnpm ci[0m
-2026-11-04T02:01:26.4320665Z shell: /usr/bin/bash -e {0}
-2026-11-04T02:01:26.4320971Z ##[endgroup]
-2026-11-04T02:01:27.4821226Z 
-2026-11-04T02:01:27.4829006Z added 18 packages, and audited 19 packages in 993ms
-2026-11-04T02:01:27.4829799Z 
-2026-11-04T02:01:27.4830470Z 8 packages are looking for funding
-2026-11-04T02:01:27.4831066Z   run `npm fund` for details
-2026-11-04T02:01:27.4832039Z 
-2026-11-04T02:01:27.5254846Z found 0 vulnerabilities
+========== D:\Descargas\ci-logs\Django Backend\1_Set up job.txt ==========
+2026-11-04T23:42:11.2389767Z Current runner version: '2.338.2'
+2026-11-04T23:42:11.2409116Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:11.2409718Z Hosted Compute Agent
+2026-11-04T23:42:11.2410124Z Version: 20261028.624
+2026-11-04T23:42:11.2410755Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-04T23:42:11.2411233Z Build Date: 2026-10-28T21:51:42Z
+2026-11-04T23:42:11.2411636Z Worker ID: {8a4a7049-bb9b-4610-b257-32d03b4b37f3}
+2026-11-04T23:42:11.2412113Z Region: centralus
+2026-11-04T23:42:11.2412477Z Cloud: Azure
+2026-11-04T23:42:11.2412823Z ##[endgroup]
+2026-11-04T23:42:11.2413710Z ##[group]Operating System
+2026-11-04T23:42:11.2414077Z Ubuntu
+2026-11-04T23:42:11.2414419Z 24.04.5
+2026-11-04T23:42:11.2414778Z LTS
+2026-11-04T23:42:11.2415087Z ##[endgroup]
+2026-11-04T23:42:11.2415456Z ##[group]Runner Image
+2026-11-04T23:42:11.2415825Z Image: ubuntu-24.04
+2026-11-04T23:42:11.2416220Z Version: 20261101.360.1
+2026-11-04T23:42:11.2416867Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:11.2417876Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-04T23:42:11.2418459Z ##[endgroup]
+2026-11-04T23:42:11.2419209Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:11.2420779Z Contents: read
+2026-11-04T23:42:11.2421438Z Metadata: read
+2026-11-04T23:42:11.2421800Z Packages: read
+2026-11-04T23:42:11.2422135Z ##[endgroup]
+2026-11-04T23:42:11.2423583Z Secret source: Actions
+2026-11-04T23:42:11.2424202Z Cache mode: write
+2026-11-04T23:42:11.2424697Z Prepare workflow directory
+2026-11-04T23:42:11.2643776Z Prepare all required actions
+2026-11-04T23:42:11.2674878Z Getting action download info
+2026-11-04T23:42:11.4744822Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:11.5852893Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-04T23:42:11.7425279Z Complete job name: Django Backend
 
-========== .\ci-logs\React Frontend\5_Build React application.txt ==========
-2026-11-04T02:01:27.5292520Z ##[group]Run npm run build
-2026-11-04T02:01:27.5292862Z [36;1mnpm run build[0m
-2026-11-04T02:01:27.5316134Z shell: /usr/bin/bash -e {0}
-2026-11-04T02:01:27.5316409Z ##[endgroup]
-2026-11-04T02:01:27.6304406Z 
-2026-11-04T02:01:27.6305174Z > frontend@1.0.0 build
-2026-11-04T02:01:27.6305568Z > vite build
-2026-11-04T02:01:27.6305709Z 
-2026-11-04T02:01:27.8167409Z [33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
-2026-11-04T02:01:27.8171094Z   - ESM syntax in a file loaded as CommonJS (vite.config.js:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
-2026-11-04T02:01:27.8172920Z Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
-2026-11-04T02:01:27.8299271Z [36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
-2026-11-04T02:01:27.8479854Z transforming...
-2026-11-04T02:01:27.9079012Z ✓ 24 modules transformed.
-2026-11-04T02:01:27.9278548Z rendering chunks...
-2026-11-04T02:01:27.9613746Z computing gzip size...
-2026-11-04T02:01:27.9660377Z dist/index.html                   0.38 kB │ gzip:  0.27 kB
-2026-11-04T02:01:27.9661381Z dist/assets/index-DJkI1kXl.css    3.66 kB │ gzip:  1.22 kB
-2026-11-04T02:01:27.9662251Z dist/assets/index-CPjt7XTh.js   233.11 kB │ gzip: 72.46 kB
-2026-11-04T02:01:27.9662643Z 
-2026-11-04T02:01:27.9664320Z [32m✓ built in 136ms[39m
+========== D:\Descargas\ci-logs\Django Backend\13_Post Set up Python.txt ==========
+2026-11-04T23:42:21.2675844Z Post job cleanup.
+2026-11-04T23:42:21.3487174Z Cache hit occurred on the primary key setup-python-Linux-x64-24.04-Ubuntu-python-3.14.10-pip-9e78107891fe76e4f02f4436208a590a88266b546437cac31b12d9c49ca40d56, not saving cache.
+2026-11-04T23:42:21.3488102Z (node:2175) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:21.3488462Z (Use `node --trace-deprecation ...` to show where the warning was created)
+
+========== D:\Descargas\ci-logs\Django Backend\14_Post Checkout repository.txt ==========
+2026-11-04T23:42:21.3610004Z Post job cleanup.
+2026-11-04T23:42:21.4188632Z [command]/usr/bin/git version
+2026-11-04T23:42:21.4224997Z git version 2.56.0
+2026-11-04T23:42:21.4251349Z Temporarily overriding HOME='/home/runner/work/_temp/0fdab0fb-e932-4d0b-a2b2-b2be5c9c78ca' before making global git config changes
+2026-11-04T23:42:21.4251978Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:21.4261049Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:21.4299653Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:21.4331642Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:21.4551352Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:21.4581666Z http.https://github.com/.extraheader
+2026-11-04T23:42:21.4590902Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:21.4630192Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:21.4860662Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:21.4900636Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+========== D:\Descargas\ci-logs\Django Backend\15_Complete job.txt ==========
+2026-11-04T23:42:21.5230270Z Cleaning up orphan processes
+2026-11-04T23:42:21.5478189Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+========== D:\Descargas\ci-logs\Django Backend\2_Checkout repository.txt ==========
+2026-11-04T23:42:11.7947031Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:11.7947505Z with:
+2026-11-04T23:42:11.7947747Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:11.7949708Z   token: ***
+2026-11-04T23:42:11.7949934Z   ssh-strict: true
+2026-11-04T23:42:11.7950165Z   ssh-user: git
+2026-11-04T23:42:11.7950524Z   persist-credentials: true
+2026-11-04T23:42:11.7950780Z   clean: true
+2026-11-04T23:42:11.7951018Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:11.7951298Z   fetch-depth: 1
+2026-11-04T23:42:11.7951529Z   fetch-tags: false
+2026-11-04T23:42:11.7951764Z   show-progress: true
+2026-11-04T23:42:11.7952001Z   lfs: false
+2026-11-04T23:42:11.7952219Z   submodules: false
+2026-11-04T23:42:11.7952458Z   set-safe-directory: true
+2026-11-04T23:42:11.7952727Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:11.7953084Z ##[endgroup]
+2026-11-04T23:42:11.9727522Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:11.9729107Z ##[group]Getting Git version info
+2026-11-04T23:42:11.9729755Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:11.9730932Z [command]/usr/bin/git version
+2026-11-04T23:42:11.9786769Z git version 2.56.0
+2026-11-04T23:42:11.9799994Z ##[endgroup]
+2026-11-04T23:42:11.9811474Z Temporarily overriding HOME='/home/runner/work/_temp/7fcc7347-1f05-4626-8dd2-5d1b334a1fc2' before making global git config changes
+2026-11-04T23:42:11.9813172Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:11.9815844Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:11.9881387Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:11.9882867Z ##[group]Initializing the repository
+2026-11-04T23:42:11.9883660Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:11.9944281Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:11.9945648Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:11.9946449Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:11.9946918Z hint: call:
+2026-11-04T23:42:11.9947143Z hint:
+2026-11-04T23:42:11.9947444Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:11.9947767Z hint:
+2026-11-04T23:42:11.9948074Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:11.9948713Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:11.9949098Z hint:
+2026-11-04T23:42:11.9949335Z hint: 	git branch -m <name>
+2026-11-04T23:42:11.9949581Z hint:
+2026-11-04T23:42:11.9949906Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:11.9954766Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:11.9964955Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.0006671Z ##[endgroup]
+2026-11-04T23:42:12.0007273Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:12.0010612Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:12.0041591Z ##[endgroup]
+2026-11-04T23:42:12.0042246Z ##[group]Setting up auth
+2026-11-04T23:42:12.0047495Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:12.0081568Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:12.0384480Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:12.0422329Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:12.0614055Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:12.0651572Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:12.0840988Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:12.0953786Z ##[endgroup]
+2026-11-04T23:42:12.0954587Z ##[group]Fetching the repository
+2026-11-04T23:42:12.0963712Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:12.6539535Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.6540696Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:12.6542563Z ##[endgroup]
+2026-11-04T23:42:12.6543207Z ##[group]Determining the checkout info
+2026-11-04T23:42:12.6545172Z ##[endgroup]
+2026-11-04T23:42:12.6549037Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:12.6599241Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:12.6632708Z ##[group]Checking out the ref
+2026-11-04T23:42:12.6635995Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:12.6818401Z Switched to a new branch 'main'
+2026-11-04T23:42:12.6820937Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:12.6826074Z ##[endgroup]
+2026-11-04T23:42:12.6870010Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:12.6900845Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+
+========== D:\Descargas\ci-logs\Django Backend\3_Set up Python.txt ==========
+2026-11-04T23:42:12.7109939Z ##[group]Run actions/setup-python@v5
+2026-11-04T23:42:12.7110504Z with:
+2026-11-04T23:42:12.7110774Z   python-version: 3.14
+2026-11-04T23:42:12.7111015Z   cache: pip
+2026-11-04T23:42:12.7111374Z   cache-dependency-path: server/requirements.txt
+2026-11-04T23:42:12.7111811Z   check-latest: false
+2026-11-04T23:42:12.7113949Z   token: ***
+2026-11-04T23:42:12.7114182Z   update-environment: true
+2026-11-04T23:42:12.7114446Z   allow-prereleases: false
+2026-11-04T23:42:12.7114697Z   freethreaded: false
+2026-11-04T23:42:12.7114934Z ##[endgroup]
+2026-11-04T23:42:12.8040642Z ##[group]Installed versions
+2026-11-04T23:42:12.8099226Z (node:2099) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:12.8100191Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:12.8100826Z Successfully set up CPython (3.14.10)
+2026-11-04T23:42:12.8101321Z ##[endgroup]
+2026-11-04T23:42:12.8448367Z [command]/opt/hostedtoolcache/Python/3.14.10/x64/bin/pip cache dir
+2026-11-04T23:42:14.5986477Z /home/runner/.cache/pip
+2026-11-04T23:42:14.7779507Z Cache hit for: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.10-pip-9e78107891fe76e4f02f4436208a590a88266b546437cac31b12d9c49ca40d56
+2026-11-04T23:42:14.7860018Z (node:2099) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-04T23:42:15.5358979Z Received 15733276 of 15733276 (100.0%), 26.3 MBs/sec
+2026-11-04T23:42:15.5376732Z Cache Size: ~15 MB (15733276 B)
+2026-11-04T23:42:15.5377617Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2bb53969-4861-442e-9a7c-83e21cf98818/cache.tzst -P -C /home/runner/work/cars-dealership/cars-dealership --use-compress-program unzstd
+2026-11-04T23:42:15.5662611Z Cache restored successfully
+2026-11-04T23:42:15.5725839Z Cache restored from key: setup-python-Linux-x64-24.04-Ubuntu-python-3.14.10-pip-9e78107891fe76e4f02f4436208a590a88266b546437cac31b12d9c49ca40d56
+
+========== D:\Descargas\ci-logs\Django Backend\4_Install Python dependencies.txt ==========
+2026-11-04T23:42:15.5869690Z ##[group]Run pip install -r requirements.txt
+2026-11-04T23:42:15.5869980Z [36;1mpip install -r requirements.txt[0m
+2026-11-04T23:42:15.5891221Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:15.5891436Z env:
+2026-11-04T23:42:15.5891597Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5891847Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:15.5892091Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5892341Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5892559Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:15.5892776Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:15.5892966Z ##[endgroup]
+2026-11-04T23:42:16.7230196Z Collecting asgiref==3.13.0 (from -r requirements.txt (line 1))
+2026-11-04T23:42:16.7240991Z   Using cached asgiref-3.13.0-py3-none-any.whl.metadata (12 kB)
+2026-11-04T23:42:16.7524876Z Collecting certifi==2026.10.23 (from -r requirements.txt (line 2))
+2026-11-04T23:42:16.7533322Z   Using cached certifi-2026.10.23-py3-none-any.whl.metadata (2.5 kB)
+2026-11-04T23:42:16.8238431Z Collecting charset-normalizer==3.5.2 (from -r requirements.txt (line 3))
+2026-11-04T23:42:16.8247731Z   Using cached charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+2026-11-04T23:42:16.8454370Z Collecting dj-database-url==3.1.2 (from -r requirements.txt (line 4))
+2026-11-04T23:42:16.8464595Z   Using cached dj_database_url-3.1.2-py3-none-any.whl.metadata (13 kB)
+2026-11-04T23:42:16.8792423Z Collecting Django==6.1.3 (from -r requirements.txt (line 5))
+2026-11-04T23:42:16.8800968Z   Using cached django-6.1.3-py3-none-any.whl.metadata (3.9 kB)
+2026-11-04T23:42:16.9010628Z Collecting gunicorn==26.2.0 (from -r requirements.txt (line 6))
+2026-11-04T23:42:16.9018386Z   Using cached gunicorn-26.2.0-py3-none-any.whl.metadata (5.5 kB)
+2026-11-04T23:42:16.9225876Z Collecting idna==3.20 (from -r requirements.txt (line 7))
+2026-11-04T23:42:16.9233250Z   Using cached idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+2026-11-04T23:42:16.9447087Z Collecting psycopg==3.3.8 (from -r requirements.txt (line 8))
+2026-11-04T23:42:16.9455199Z   Using cached psycopg-3.3.8-py3-none-any.whl.metadata (4.4 kB)
+2026-11-04T23:42:17.0334044Z Collecting psycopg-binary==3.3.8 (from -r requirements.txt (line 9))
+2026-11-04T23:42:17.0343761Z   Using cached psycopg_binary-3.3.8-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.7 kB)
+2026-11-04T23:42:17.0706286Z Collecting requests==2.34.2 (from -r requirements.txt (line 10))
+2026-11-04T23:42:17.0714008Z   Using cached requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+2026-11-04T23:42:17.0903642Z Collecting sqlparse==0.6.1 (from -r requirements.txt (line 11))
+2026-11-04T23:42:17.0911058Z   Using cached sqlparse-0.6.1-py3-none-any.whl.metadata (6.9 kB)
+2026-11-04T23:42:17.1103288Z Collecting tzdata==2026.6 (from -r requirements.txt (line 12))
+2026-11-04T23:42:17.1110296Z   Using cached tzdata-2026.6-py2.py3-none-any.whl.metadata (1.4 kB)
+2026-11-04T23:42:17.1330216Z Collecting urllib3==2.8.0 (from -r requirements.txt (line 13))
+2026-11-04T23:42:17.1337542Z   Using cached urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+2026-11-04T23:42:17.1723547Z Collecting vaderSentiment==3.3.2 (from -r requirements.txt (line 14))
+2026-11-04T23:42:17.1731654Z   Using cached vaderSentiment-3.3.2-py2.py3-none-any.whl.metadata (572 bytes)
+2026-11-04T23:42:17.1934863Z Collecting whitenoise==6.12.0 (from -r requirements.txt (line 15))
+2026-11-04T23:42:17.1941983Z   Using cached whitenoise-6.12.0-py3-none-any.whl.metadata (3.7 kB)
+2026-11-04T23:42:17.2010692Z Using cached asgiref-3.13.0-py3-none-any.whl (27 kB)
+2026-11-04T23:42:17.2017242Z Using cached certifi-2026.10.23-py3-none-any.whl (135 kB)
+2026-11-04T23:42:17.2024020Z Using cached charset_normalizer-3.5.2-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (255 kB)
+2026-11-04T23:42:17.2030572Z Using cached dj_database_url-3.1.2-py3-none-any.whl (9.0 kB)
+2026-11-04T23:42:17.2036532Z Using cached django-6.1.3-py3-none-any.whl (8.4 MB)
+2026-11-04T23:42:17.2062021Z Using cached gunicorn-26.2.0-py3-none-any.whl (228 kB)
+2026-11-04T23:42:17.2068354Z Using cached idna-3.20-py3-none-any.whl (69 kB)
+2026-11-04T23:42:17.2074682Z Using cached psycopg-3.3.8-py3-none-any.whl (216 kB)
+2026-11-04T23:42:17.2083772Z Using cached psycopg_binary-3.3.8-cp314-cp314-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.3 MB)
+2026-11-04T23:42:17.2104173Z Using cached requests-2.34.2-py3-none-any.whl (73 kB)
+2026-11-04T23:42:17.2110749Z Using cached urllib3-2.8.0-py3-none-any.whl (135 kB)
+2026-11-04T23:42:17.2117059Z Using cached sqlparse-0.6.1-py3-none-any.whl (51 kB)
+2026-11-04T23:42:17.2123556Z Using cached tzdata-2026.6-py2.py3-none-any.whl (348 kB)
+2026-11-04T23:42:17.2130636Z Using cached vaderSentiment-3.3.2-py2.py3-none-any.whl (125 kB)
+2026-11-04T23:42:17.2136961Z Using cached whitenoise-6.12.0-py3-none-any.whl (20 kB)
+2026-11-04T23:42:17.4103039Z Installing collected packages: whitenoise, urllib3, tzdata, sqlparse, psycopg-binary, psycopg, idna, gunicorn, charset-normalizer, certifi, asgiref, requests, Django, vaderSentiment, dj-database-url
+2026-11-04T23:42:19.2606230Z 
+2026-11-04T23:42:19.2630896Z 
+2026-11-04T23:42:19.2631973Z Successfully installed Django-6.1.3 asgiref-3.13.0 certifi-2026.10.23 charset-normalizer-3.5.2 dj-database-url-3.1.2 gunicorn-26.2.0 idna-3.20 psycopg-3.3.8 psycopg-binary-3.3.8 requests-2.34.2 sqlparse-0.6.1 tzdata-2026.6 urllib3-2.8.0 vaderSentiment-3.3.2 whitenoise-6.12.0
+2026-11-04T23:42:19.2632963Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-04T23:42:19.2633182Z [notice] To update, run: pip install --upgrade pip
+
+========== D:\Descargas\ci-logs\Django Backend\5_Check Django configuration.txt ==========
+2026-11-04T23:42:19.3451420Z ##[group]Run python manage.py check
+2026-11-04T23:42:19.3451630Z [36;1mpython manage.py check[0m
+2026-11-04T23:42:19.3468059Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:19.3468193Z env:
+2026-11-04T23:42:19.3468340Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3468572Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:19.3468938Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3469142Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3469417Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:19.3469628Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:19.3469809Z ##[endgroup]
+2026-11-04T23:42:20.3255854Z System check identified some issues:
+2026-11-04T23:42:20.3256158Z 
+2026-11-04T23:42:20.3256292Z WARNINGS:
+2026-11-04T23:42:20.3256817Z ?: (staticfiles.W004) The directory '/home/runner/work/cars-dealership/cars-dealership/server/frontend/dist' in the STATICFILES_DIRS setting does not exist.
+2026-11-04T23:42:20.3257407Z 
+2026-11-04T23:42:20.3257515Z System check identified 1 issue (0 silenced).
+
+========== D:\Descargas\ci-logs\Django Backend\6_Check migrations.txt ==========
+2026-11-04T23:42:20.3812459Z ##[group]Run python manage.py makemigrations --check --dry-run
+2026-11-04T23:42:20.3812758Z [36;1mpython manage.py makemigrations --check --dry-run[0m
+2026-11-04T23:42:20.3828734Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:20.3828892Z env:
+2026-11-04T23:42:20.3829046Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3829274Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:20.3829499Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3829707Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3829913Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.3830117Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:20.3830292Z ##[endgroup]
+2026-11-04T23:42:20.5517825Z System check identified some issues:
+2026-11-04T23:42:20.5518085Z 
+2026-11-04T23:42:20.5518138Z WARNINGS:
+2026-11-04T23:42:20.5518490Z ?: (staticfiles.W004) The directory '/home/runner/work/cars-dealership/cars-dealership/server/frontend/dist' in the STATICFILES_DIRS setting does not exist.
+2026-11-04T23:42:20.5592302Z No changes detected
+
+========== D:\Descargas\ci-logs\Django Backend\7_Run Django tests.txt ==========
+2026-11-04T23:42:20.6159408Z ##[group]Run python manage.py test
+2026-11-04T23:42:20.6159611Z [36;1mpython manage.py test[0m
+2026-11-04T23:42:20.6175680Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:20.6175816Z env:
+2026-11-04T23:42:20.6175959Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6176186Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib/pkgconfig
+2026-11-04T23:42:20.6176408Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6176611Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6176817Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.10/x64
+2026-11-04T23:42:20.6177024Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.10/x64/lib
+2026-11-04T23:42:20.6177199Z ##[endgroup]
+2026-11-04T23:42:21.1922529Z System check identified some issues:
+2026-11-04T23:42:21.1922844Z 
+2026-11-04T23:42:21.1922929Z WARNINGS:
+2026-11-04T23:42:21.1923451Z ?: (staticfiles.W004) The directory '/home/runner/work/cars-dealership/cars-dealership/server/frontend/dist' in the STATICFILES_DIRS setting does not exist.
+2026-11-04T23:42:21.1924050Z 
+2026-11-04T23:42:21.1924168Z System check identified 1 issue (0 silenced).
+2026-11-04T23:42:21.1924346Z 
+2026-11-04T23:42:21.1924476Z ----------------------------------------------------------------------
+2026-11-04T23:42:21.1924790Z Ran 0 tests in 0.000s
+2026-11-04T23:42:21.1924903Z 
+2026-11-04T23:42:21.1924974Z NO TESTS RAN
+2026-11-04T23:42:21.1925150Z Found 0 test(s).
+
+========== D:\Descargas\ci-logs\Django Backend\system.txt ==========
+2026-11-04T23:42:08.5000000Z Evaluating backend.if
+2026-11-04T23:42:08.5000000Z Evaluating: success()
+2026-11-04T23:42:08.5000000Z Result: true
+2026-11-04T23:42:08.5000000Z Requested labels: ubuntu-latest
+2026-11-04T23:42:08.5000000Z Job defined at: dan-u-f/cars-dealership/.github/workflows/ci.yml@refs/heads/main
+2026-11-04T23:42:08.5000000Z Waiting for a runner to pick up this job...
+2026-11-04T23:42:08.8270000Z Job is waiting for a hosted runner to come online.
+2026-11-04T23:42:08.8270000Z Job is about to start running on the hosted runner: GitHub Actions 1000000027
+
+========== D:\Descargas\ci-logs\JavaScript Lint\1_Set up job.txt ==========
+2026-11-04T23:42:12.0740654Z Current runner version: '2.338.2'
+2026-11-04T23:42:12.0770100Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:12.0771102Z Hosted Compute Agent
+2026-11-04T23:42:12.0771805Z Version: 20261028.624
+2026-11-04T23:42:12.0772483Z Commit: 54898b74c23fde5556c9b3c3a2290865feef0dfe
+2026-11-04T23:42:12.0773282Z Build Date: 2026-10-28T21:51:42Z
+2026-11-04T23:42:12.0774092Z Worker ID: {25888bb3-c9f4-4825-852d-ad87c45c64bf}
+2026-11-04T23:42:12.0774862Z Region: westus2
+2026-11-04T23:42:12.0775413Z Cloud: Azure
+2026-11-04T23:42:12.0776050Z ##[endgroup]
+2026-11-04T23:42:12.0777887Z ##[group]Operating System
+2026-11-04T23:42:12.0778885Z Ubuntu
+2026-11-04T23:42:12.0779429Z 24.04.5
+2026-11-04T23:42:12.0779941Z LTS
+2026-11-04T23:42:12.0780602Z ##[endgroup]
+2026-11-04T23:42:12.0781221Z ##[group]Runner Image
+2026-11-04T23:42:12.0781887Z Image: ubuntu-24.04
+2026-11-04T23:42:12.0782532Z Version: 20261101.360.1
+2026-11-04T23:42:12.0783632Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261101.360/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:12.0785559Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261101.360
+2026-11-04T23:42:12.0786596Z ##[endgroup]
+2026-11-04T23:42:12.0788301Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:12.0791070Z Contents: read
+2026-11-04T23:42:12.0791796Z Metadata: read
+2026-11-04T23:42:12.0792378Z Packages: read
+2026-11-04T23:42:12.0793117Z ##[endgroup]
+2026-11-04T23:42:12.0795381Z Secret source: Actions
+2026-11-04T23:42:12.0796531Z Cache mode: write
+2026-11-04T23:42:12.0797255Z Prepare workflow directory
+2026-11-04T23:42:12.1153905Z Prepare all required actions
+2026-11-04T23:42:12.1205051Z Getting action download info
+2026-11-04T23:42:12.4543122Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:12.5415075Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-04T23:42:12.7420552Z Complete job name: JavaScript Lint
+
+========== D:\Descargas\ci-logs\JavaScript Lint\10_Post Checkout repository.txt ==========
+2026-11-04T23:42:23.4258715Z Post job cleanup.
+2026-11-04T23:42:23.5142237Z [command]/usr/bin/git version
+2026-11-04T23:42:23.5221945Z git version 2.56.0
+2026-11-04T23:42:23.5263666Z Temporarily overriding HOME='/home/runner/work/_temp/38f1035a-f53f-47e5-a4ac-57877d725d31' before making global git config changes
+2026-11-04T23:42:23.5265156Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:23.5272601Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:23.5318547Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:23.5358980Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:23.5657034Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:23.5703466Z http.https://github.com/.extraheader
+2026-11-04T23:42:23.5731053Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:23.5784756Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:23.6188351Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:23.6226995Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+========== D:\Descargas\ci-logs\JavaScript Lint\11_Complete job.txt ==========
+2026-11-04T23:42:23.6658233Z Cleaning up orphan processes
+2026-11-04T23:42:23.7105994Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+========== D:\Descargas\ci-logs\JavaScript Lint\2_Checkout repository.txt ==========
+2026-11-04T23:42:12.8402119Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:12.8403126Z with:
+2026-11-04T23:42:12.8403667Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.8408151Z   token: ***
+2026-11-04T23:42:12.8408703Z   ssh-strict: true
+2026-11-04T23:42:12.8409218Z   ssh-user: git
+2026-11-04T23:42:12.8409732Z   persist-credentials: true
+2026-11-04T23:42:12.8410285Z   clean: true
+2026-11-04T23:42:12.8410790Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:12.8411381Z   fetch-depth: 1
+2026-11-04T23:42:12.8411876Z   fetch-tags: false
+2026-11-04T23:42:12.8412323Z   show-progress: true
+2026-11-04T23:42:12.8412772Z   lfs: false
+2026-11-04T23:42:12.8413189Z   submodules: false
+2026-11-04T23:42:12.8413647Z   set-safe-directory: true
+2026-11-04T23:42:12.8414171Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:12.8414980Z ##[endgroup]
+2026-11-04T23:42:13.1184916Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:13.1186755Z ##[group]Getting Git version info
+2026-11-04T23:42:13.1187919Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:13.1189147Z [command]/usr/bin/git version
+2026-11-04T23:42:13.1280776Z git version 2.56.0
+2026-11-04T23:42:13.1311868Z ##[endgroup]
+2026-11-04T23:42:13.1350097Z Temporarily overriding HOME='/home/runner/work/_temp/34f3a093-ca74-443a-a7c6-1f3a8b083a74' before making global git config changes
+2026-11-04T23:42:13.1353375Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:13.1356207Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:13.1456671Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:13.1459669Z ##[group]Initializing the repository
+2026-11-04T23:42:13.1461313Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:13.1578913Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:13.1582536Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:13.1584836Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:13.1586715Z hint: call:
+2026-11-04T23:42:13.1588252Z hint:
+2026-11-04T23:42:13.1590961Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:13.1618796Z hint:
+2026-11-04T23:42:13.1620357Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:13.1622235Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:13.1623695Z hint:
+2026-11-04T23:42:13.1624710Z hint: 	git branch -m <name>
+2026-11-04T23:42:13.1625837Z hint:
+2026-11-04T23:42:13.1627229Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:13.1629618Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:13.1633423Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:13.1706763Z ##[endgroup]
+2026-11-04T23:42:13.1708532Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:13.1710068Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:13.1750347Z ##[endgroup]
+2026-11-04T23:42:13.1752091Z ##[group]Setting up auth
+2026-11-04T23:42:13.1760571Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:13.1832223Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:13.2315106Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:13.2363907Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:13.2615713Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:13.2661168Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:13.2912866Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:13.2964680Z ##[endgroup]
+2026-11-04T23:42:13.2965548Z ##[group]Fetching the repository
+2026-11-04T23:42:13.2977547Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:14.0012385Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:14.0014672Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:14.0018789Z ##[endgroup]
+2026-11-04T23:42:14.0020484Z ##[group]Determining the checkout info
+2026-11-04T23:42:14.0022528Z ##[endgroup]
+2026-11-04T23:42:14.0029050Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:14.0095577Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:14.0138533Z ##[group]Checking out the ref
+2026-11-04T23:42:14.0153404Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:14.0393964Z Switched to a new branch 'main'
+2026-11-04T23:42:14.0400031Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:14.0406837Z ##[endgroup]
+2026-11-04T23:42:14.0460557Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:14.0495853Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+
+========== D:\Descargas\ci-logs\JavaScript Lint\3_Set up Node.js.txt ==========
+2026-11-04T23:42:14.0853216Z ##[group]Run actions/setup-node@v4
+2026-11-04T23:42:14.0854063Z with:
+2026-11-04T23:42:14.0854531Z   node-version: 25
+2026-11-04T23:42:14.0855093Z   cache: npm
+2026-11-04T23:42:14.0855858Z   cache-dependency-path: server/frontend/package-lock.json
+2026-11-04T23:42:14.0856924Z   always-auth: false
+2026-11-04T23:42:14.0857932Z   check-latest: false
+2026-11-04T23:42:14.0867994Z   token: ***
+2026-11-04T23:42:14.0868504Z ##[endgroup]
+2026-11-04T23:42:14.2384215Z Attempting to download 25...
+2026-11-04T23:42:14.2542368Z (node:2552) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:14.2548275Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:15.0516386Z Not found in manifest. Falling back to download directly from Node
+2026-11-04T23:42:15.1039286Z Acquiring 25.9.0 - x64 from https://nodejs.org/dist/v25.9.0/node-v25.9.0-linux-x64.tar.gz
+2026-11-04T23:42:15.3966270Z Extracting ...
+2026-11-04T23:42:15.4099003Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/8a003023-743c-4ef5-8891-b91ddc359121 -f /home/runner/work/_temp/af24036f-e93a-4e3c-95e4-c3c29d6cdf2c
+2026-11-04T23:42:16.6198568Z Adding to the cache ...
+2026-11-04T23:42:18.2721347Z Done
+2026-11-04T23:42:18.2725936Z ##[group]Environment details
+2026-11-04T23:42:18.5208611Z node: v25.9.0
+2026-11-04T23:42:18.5209140Z npm: 11.12.1
+2026-11-04T23:42:18.5209496Z yarn: 1.22.22
+2026-11-04T23:42:18.5210186Z ##[endgroup]
+2026-11-04T23:42:18.5235294Z [command]/opt/hostedtoolcache/node/25.9.0/x64/bin/npm config get cache
+2026-11-04T23:42:18.6201926Z /home/runner/.npm
+2026-11-04T23:42:18.8534182Z Cache hit for: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+2026-11-04T23:42:18.8638681Z (node:2552) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-04T23:42:20.1549168Z Received 10804622 of 19193230 (56.3%), 10.3 MBs/sec
+2026-11-04T23:42:20.2376749Z Received 19193230 of 19193230 (100.0%), 16.9 MBs/sec
+2026-11-04T23:42:20.2378072Z Cache Size: ~18 MB (19193230 B)
+2026-11-04T23:42:20.2404142Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2a03c80a-e50e-4dc0-90fc-7c729c94bd59/cache.tzst -P -C /home/runner/work/cars-dealership/cars-dealership --use-compress-program unzstd
+2026-11-04T23:42:20.3266103Z Cache restored successfully
+2026-11-04T23:42:20.3281894Z Cache restored from key: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+
+========== D:\Descargas\ci-logs\JavaScript Lint\4_Install frontend dependencies.txt ==========
+2026-11-04T23:42:20.3526012Z ##[group]Run npm ci
+2026-11-04T23:42:20.3526329Z [36;1mnpm ci[0m
+2026-11-04T23:42:20.3552549Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:20.3552848Z ##[endgroup]
+2026-11-04T23:42:22.0845465Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-11-04T23:42:22.4643196Z 
+2026-11-04T23:42:22.4644430Z added 223 packages, and audited 224 packages in 2s
+2026-11-04T23:42:22.4644974Z 
+2026-11-04T23:42:22.4648167Z 114 packages are looking for funding
+2026-11-04T23:42:22.4648815Z   run `npm fund` for details
+2026-11-04T23:42:22.4656009Z 
+2026-11-04T23:42:22.4656574Z found 0 vulnerabilities
+
+========== D:\Descargas\ci-logs\JavaScript Lint\5_Run JavaScript lint.txt ==========
+2026-11-04T23:42:22.5187968Z ##[group]Run npm run lint
+2026-11-04T23:42:22.5188347Z [36;1mnpm run lint[0m
+2026-11-04T23:42:22.5213854Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:22.5214140Z ##[endgroup]
+2026-11-04T23:42:22.6193934Z 
+2026-11-04T23:42:22.6194582Z > frontend@1.0.0 lint
+2026-11-04T23:42:22.6195073Z > eslint src
+2026-11-04T23:42:22.6195240Z 
+
+========== D:\Descargas\ci-logs\JavaScript Lint\9_Post Set up Node.js.txt ==========
+2026-11-04T23:42:23.2783844Z Post job cleanup.
+2026-11-04T23:42:23.4093934Z (node:2645) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:23.4095135Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:23.4098812Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760, not saving cache.
+
+========== D:\Descargas\ci-logs\JavaScript Lint\system.txt ==========
+2026-11-04T23:42:08.5020000Z Evaluating javascript-lint.if
+2026-11-04T23:42:08.5020000Z Evaluating: success()
+2026-11-04T23:42:08.5020000Z Result: true
+2026-11-04T23:42:08.5040000Z Requested labels: ubuntu-latest
+2026-11-04T23:42:08.5040000Z Job defined at: dan-u-f/cars-dealership/.github/workflows/ci.yml@refs/heads/main
+2026-11-04T23:42:08.5040000Z Waiting for a runner to pick up this job...
+2026-11-04T23:42:09.1440000Z Job is waiting for a hosted runner to come online.
+2026-11-04T23:42:09.1450000Z Job is about to start running on the hosted runner: GitHub Actions 1000000028
+
+========== D:\Descargas\ci-logs\Python Lint\1_Set up job.txt ==========
+2026-11-04T23:42:11.5470169Z Current runner version: '2.338.2'
+2026-11-04T23:42:11.5497095Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:11.5498144Z Hosted Compute Agent
+2026-11-04T23:42:11.5498960Z Version: 20261021.618
+2026-11-04T23:42:11.5499718Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-04T23:42:11.5500544Z Build Date: 2026-10-21T00:45:21Z
+2026-11-04T23:42:11.5501268Z Worker ID: {5a129fb7-90d9-41fb-be92-48fd55d1284a}
+2026-11-04T23:42:11.5502118Z Region: southcentralus
+2026-11-04T23:42:11.5502817Z Cloud: Azure
+2026-11-04T23:42:11.5503462Z ##[endgroup]
+2026-11-04T23:42:11.5504923Z ##[group]Operating System
+2026-11-04T23:42:11.5505585Z Ubuntu
+2026-11-04T23:42:11.5506263Z 24.04.5
+2026-11-04T23:42:11.5506845Z LTS
+2026-11-04T23:42:11.5507445Z ##[endgroup]
+2026-11-04T23:42:11.5508111Z ##[group]Runner Image
+2026-11-04T23:42:11.5508962Z Image: ubuntu-24.04
+2026-11-04T23:42:11.5509645Z Version: 20261025.353.1
+2026-11-04T23:42:11.5510851Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:11.5512745Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-11-04T23:42:11.5513770Z ##[endgroup]
+2026-11-04T23:42:11.5515107Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:11.5517393Z Contents: read
+2026-11-04T23:42:11.5518235Z Metadata: read
+2026-11-04T23:42:11.5519046Z Packages: read
+2026-11-04T23:42:11.5520003Z ##[endgroup]
+2026-11-04T23:42:11.5522159Z Secret source: Actions
+2026-11-04T23:42:11.5523264Z Cache mode: write
+2026-11-04T23:42:11.5524073Z Prepare workflow directory
+2026-11-04T23:42:11.5867538Z Prepare all required actions
+2026-11-04T23:42:11.5915842Z Getting action download info
+2026-11-04T23:42:11.8713947Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:12.0016008Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+2026-11-04T23:42:12.2441366Z Complete job name: Python Lint
+
+========== D:\Descargas\ci-logs\Python Lint\10_Post Checkout repository.txt ==========
+2026-11-04T23:42:15.4652463Z Post job cleanup.
+2026-11-04T23:42:15.5576785Z [command]/usr/bin/git version
+2026-11-04T23:42:15.5624216Z git version 2.56.0
+2026-11-04T23:42:15.5665767Z Temporarily overriding HOME='/home/runner/work/_temp/1d8acd2a-6e68-4bf1-9bc5-9f176146bba2' before making global git config changes
+2026-11-04T23:42:15.5666839Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:15.5672034Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:15.5720568Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:15.5841093Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:15.6120956Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:15.6150147Z http.https://github.com/.extraheader
+2026-11-04T23:42:15.6152144Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:15.6191656Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:15.6557179Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:15.6626510Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+========== D:\Descargas\ci-logs\Python Lint\11_Complete job.txt ==========
+2026-11-04T23:42:15.7103423Z Cleaning up orphan processes
+2026-11-04T23:42:15.7487195Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-python@v5. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+========== D:\Descargas\ci-logs\Python Lint\2_Checkout repository.txt ==========
+2026-11-04T23:42:12.3287102Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:12.3287970Z with:
+2026-11-04T23:42:12.3288449Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.3292478Z   token: ***
+2026-11-04T23:42:12.3292945Z   ssh-strict: true
+2026-11-04T23:42:12.3293417Z   ssh-user: git
+2026-11-04T23:42:12.3293882Z   persist-credentials: true
+2026-11-04T23:42:12.3294388Z   clean: true
+2026-11-04T23:42:12.3294852Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:12.3295382Z   fetch-depth: 1
+2026-11-04T23:42:12.3295827Z   fetch-tags: false
+2026-11-04T23:42:12.3296283Z   show-progress: true
+2026-11-04T23:42:12.3296745Z   lfs: false
+2026-11-04T23:42:12.3297173Z   submodules: false
+2026-11-04T23:42:12.3297634Z   set-safe-directory: true
+2026-11-04T23:42:12.3298154Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:12.3299005Z ##[endgroup]
+2026-11-04T23:42:12.5406723Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.5409437Z ##[group]Getting Git version info
+2026-11-04T23:42:12.5410315Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.5412019Z [command]/usr/bin/git version
+2026-11-04T23:42:12.5477316Z git version 2.56.0
+2026-11-04T23:42:12.5500680Z ##[endgroup]
+2026-11-04T23:42:12.5517935Z Temporarily overriding HOME='/home/runner/work/_temp/4082424b-e0c3-46ee-a4bd-c52b48df656c' before making global git config changes
+2026-11-04T23:42:12.5520998Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:12.5525512Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.5576875Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.5581959Z ##[group]Initializing the repository
+2026-11-04T23:42:12.5587100Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.5668554Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:12.5671901Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:12.5673566Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:12.5674911Z hint: call:
+2026-11-04T23:42:12.5675642Z hint:
+2026-11-04T23:42:12.5676524Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:12.5677618Z hint:
+2026-11-04T23:42:12.5678631Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:12.5680489Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:12.5681819Z hint:
+2026-11-04T23:42:12.5682570Z hint: 	git branch -m <name>
+2026-11-04T23:42:12.5683418Z hint:
+2026-11-04T23:42:12.5684547Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:12.5686768Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:12.5690943Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.5736603Z ##[endgroup]
+2026-11-04T23:42:12.5737817Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:12.5741571Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:12.5779143Z ##[endgroup]
+2026-11-04T23:42:12.5780255Z ##[group]Setting up auth
+2026-11-04T23:42:12.5786654Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:12.5827935Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:12.6233008Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:12.6275705Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:12.6579803Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:12.6617594Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:12.6885497Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:12.6938169Z ##[endgroup]
+2026-11-04T23:42:12.6939325Z ##[group]Fetching the repository
+2026-11-04T23:42:12.6950510Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:13.4028989Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:13.4031381Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:13.4035113Z ##[endgroup]
+2026-11-04T23:42:13.4036737Z ##[group]Determining the checkout info
+2026-11-04T23:42:13.4038553Z ##[endgroup]
+2026-11-04T23:42:13.4045112Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:13.4109026Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:13.4153578Z ##[group]Checking out the ref
+2026-11-04T23:42:13.4167668Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:13.4420968Z Switched to a new branch 'main'
+2026-11-04T23:42:13.4424830Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:13.4431536Z ##[endgroup]
+2026-11-04T23:42:13.4485296Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:13.4522087Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+
+========== D:\Descargas\ci-logs\Python Lint\3_Set up Python.txt ==========
+2026-11-04T23:42:13.4924522Z ##[group]Run actions/setup-python@v5
+2026-11-04T23:42:13.4925926Z with:
+2026-11-04T23:42:13.4926934Z   python-version: 3.14
+2026-11-04T23:42:13.4928079Z   check-latest: false
+2026-11-04T23:42:13.4938004Z   token: ***
+2026-11-04T23:42:13.4939168Z   update-environment: true
+2026-11-04T23:42:13.4940612Z   allow-prereleases: false
+2026-11-04T23:42:13.4941864Z   freethreaded: false
+2026-11-04T23:42:13.4942961Z ##[endgroup]
+2026-11-04T23:42:13.6362983Z ##[group]Installed versions
+2026-11-04T23:42:13.6444887Z (node:2290) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:13.6447608Z Successfully set up CPython (3.14.9)
+2026-11-04T23:42:13.6450049Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:13.6452584Z ##[endgroup]
+
+========== D:\Descargas\ci-logs\Python Lint\4_Install Ruff.txt ==========
+2026-11-04T23:42:13.6664634Z ##[group]Run python -m pip install ruff
+2026-11-04T23:42:13.6666118Z [36;1mpython -m pip install ruff[0m
+2026-11-04T23:42:13.6703704Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:13.6704841Z env:
+2026-11-04T23:42:13.6705963Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6707696Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T23:42:13.6709755Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6711382Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6712988Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:13.6714588Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T23:42:13.6715963Z ##[endgroup]
+2026-11-04T23:42:14.7717817Z Collecting ruff
+2026-11-04T23:42:14.8451036Z   Downloading ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (20 kB)
+2026-11-04T23:42:14.8686120Z Downloading ruff-0.17.3-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.6 MB)
+2026-11-04T23:42:14.9720488Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.6/10.6 MB 140.8 MB/s  0:00:00
+2026-11-04T23:42:15.0209999Z Installing collected packages: ruff
+2026-11-04T23:42:15.1800628Z Successfully installed ruff-0.17.3
+2026-11-04T23:42:15.1811278Z 
+2026-11-04T23:42:15.1811892Z [notice] A new release of pip is available: 26.2.2 -> 26.3
+2026-11-04T23:42:15.1813016Z [notice] To update, run: pip install --upgrade pip
+
+========== D:\Descargas\ci-logs\Python Lint\5_Lint Python files.txt ==========
+2026-11-04T23:42:15.2778067Z ##[group]Run ruff check server --select E4,E7,E9,F63,F7,F82
+2026-11-04T23:42:15.2778620Z [36;1mruff check server --select E4,E7,E9,F63,F7,F82[0m
+2026-11-04T23:42:15.2802856Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:15.2803178Z env:
+2026-11-04T23:42:15.2803506Z   pythonLocation: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2804003Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib/pkgconfig
+2026-11-04T23:42:15.2804494Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2804928Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2805352Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.14.9/x64
+2026-11-04T23:42:15.2805779Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.14.9/x64/lib
+2026-11-04T23:42:15.2806188Z ##[endgroup]
+2026-11-04T23:42:15.2940608Z All checks passed!
+
+========== D:\Descargas\ci-logs\Python Lint\9_Post Set up Python.txt ==========
+2026-11-04T23:42:15.3110596Z Post job cleanup.
+2026-11-04T23:42:15.4404575Z (node:2340) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:15.4405565Z (Use `node --trace-deprecation ...` to show where the warning was created)
+
+========== D:\Descargas\ci-logs\Python Lint\system.txt ==========
+2026-11-04T23:42:08.2590000Z Evaluating python-lint.if
+2026-11-04T23:42:08.2590000Z Evaluating: success()
+2026-11-04T23:42:08.2590000Z Result: true
+2026-11-04T23:42:08.4980000Z Requested labels: ubuntu-latest
+2026-11-04T23:42:08.4980000Z Job defined at: dan-u-f/cars-dealership/.github/workflows/ci.yml@refs/heads/main
+2026-11-04T23:42:08.4980000Z Waiting for a runner to pick up this job...
+2026-11-04T23:42:08.8260000Z Job is about to start running on the hosted runner: GitHub Actions 1000000026
+2026-11-04T23:42:08.8250000Z Job is waiting for a hosted runner to come online.
+
+========== D:\Descargas\ci-logs\React Frontend\1_Set up job.txt ==========
+2026-11-04T23:42:11.4485735Z Current runner version: '2.338.2'
+2026-11-04T23:42:11.4510476Z ##[group]Runner Image Provisioner
+2026-11-04T23:42:11.4511553Z Hosted Compute Agent
+2026-11-04T23:42:11.4512164Z Version: 20261021.618
+2026-11-04T23:42:11.4512757Z Commit: 21505ad2541d5be6135ed84fc33697146cf75b8e
+2026-11-04T23:42:11.4513454Z Build Date: 2026-10-21T00:45:21Z
+2026-11-04T23:42:11.4514101Z Worker ID: {587e8a7f-0653-4005-bd49-bcbb73c8e655}
+2026-11-04T23:42:11.4514738Z Region: eastus3
+2026-11-04T23:42:11.4515226Z Cloud: Azure
+2026-11-04T23:42:11.4515758Z ##[endgroup]
+2026-11-04T23:42:11.4517169Z ##[group]Operating System
+2026-11-04T23:42:11.4517853Z Ubuntu
+2026-11-04T23:42:11.4518324Z 24.04.5
+2026-11-04T23:42:11.4518775Z LTS
+2026-11-04T23:42:11.4519268Z ##[endgroup]
+2026-11-04T23:42:11.4519788Z ##[group]Runner Image
+2026-11-04T23:42:11.4520338Z Image: ubuntu-24.04
+2026-11-04T23:42:11.4521063Z Version: 20261025.353.1
+2026-11-04T23:42:11.4522039Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261025.353/images/ubuntu/Ubuntu2404-Readme.md
+2026-11-04T23:42:11.4523661Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261025.353
+2026-11-04T23:42:11.4524544Z ##[endgroup]
+2026-11-04T23:42:11.4525656Z ##[group]GITHUB_TOKEN Permissions
+2026-11-04T23:42:11.4527937Z Contents: read
+2026-11-04T23:42:11.4528503Z Metadata: read
+2026-11-04T23:42:11.4529042Z Packages: read
+2026-11-04T23:42:11.4529589Z ##[endgroup]
+2026-11-04T23:42:11.4531902Z Secret source: Actions
+2026-11-04T23:42:11.4532852Z Cache mode: write
+2026-11-04T23:42:11.4533516Z Prepare workflow directory
+2026-11-04T23:42:11.4955155Z Prepare all required actions
+2026-11-04T23:42:11.5026635Z Getting action download info
+2026-11-04T23:42:11.7289316Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-11-04T23:42:11.8333792Z Download action repository 'actions/setup-node@v4' (SHA:49933ea5288caeca8642d1e84afbd3f7d6820020)
+2026-11-04T23:42:11.9919939Z Complete job name: React Frontend
+
+========== D:\Descargas\ci-logs\React Frontend\10_Post Checkout repository.txt ==========
+2026-11-04T23:42:19.5358450Z Post job cleanup.
+2026-11-04T23:42:19.6178869Z [command]/usr/bin/git version
+2026-11-04T23:42:19.6226000Z git version 2.56.0
+2026-11-04T23:42:19.6271526Z Temporarily overriding HOME='/home/runner/work/_temp/7c0df7db-8292-4c88-8355-18d761a754f6' before making global git config changes
+2026-11-04T23:42:19.6273047Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:19.6278838Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:19.6317683Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:19.6456788Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:19.6593712Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:19.6617340Z http.https://github.com/.extraheader
+2026-11-04T23:42:19.6651562Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-11-04T23:42:19.6671094Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:19.6870363Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:19.6902944Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+
+========== D:\Descargas\ci-logs\React Frontend\11_Complete job.txt ==========
+2026-11-04T23:42:19.7248637Z Cleaning up orphan processes
+2026-11-04T23:42:19.7567181Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-node@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+
+========== D:\Descargas\ci-logs\React Frontend\2_Checkout repository.txt ==========
+2026-11-04T23:42:12.0684832Z ##[group]Run actions/checkout@v4
+2026-11-04T23:42:12.0686074Z with:
+2026-11-04T23:42:12.0686579Z   repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.0690481Z   token: ***
+2026-11-04T23:42:12.0691135Z   ssh-strict: true
+2026-11-04T23:42:12.0691605Z   ssh-user: git
+2026-11-04T23:42:12.0692126Z   persist-credentials: true
+2026-11-04T23:42:12.0692642Z   clean: true
+2026-11-04T23:42:12.0693132Z   sparse-checkout-cone-mode: true
+2026-11-04T23:42:12.0693710Z   fetch-depth: 1
+2026-11-04T23:42:12.0694294Z   fetch-tags: false
+2026-11-04T23:42:12.0695064Z   show-progress: true
+2026-11-04T23:42:12.0695790Z   lfs: false
+2026-11-04T23:42:12.0696546Z   submodules: false
+2026-11-04T23:42:12.0697443Z   set-safe-directory: true
+2026-11-04T23:42:12.0698447Z   allow-unsafe-pr-checkout: false
+2026-11-04T23:42:12.0700032Z ##[endgroup]
+2026-11-04T23:42:12.3146105Z Syncing repository: dan-u-f/cars-dealership
+2026-11-04T23:42:12.3148385Z ##[group]Getting Git version info
+2026-11-04T23:42:12.3149338Z Working directory is '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.3151023Z [command]/usr/bin/git version
+2026-11-04T23:42:12.3151818Z git version 2.56.0
+2026-11-04T23:42:12.3153644Z ##[endgroup]
+2026-11-04T23:42:12.3159661Z Temporarily overriding HOME='/home/runner/work/_temp/e3ba2902-5aa3-4ce6-b875-d5c2afb4c94c' before making global git config changes
+2026-11-04T23:42:12.3162754Z Adding repository directory to the temporary git global config as a safe directory
+2026-11-04T23:42:12.3165330Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.3169178Z Deleting the contents of '/home/runner/work/cars-dealership/cars-dealership'
+2026-11-04T23:42:12.3178155Z ##[group]Initializing the repository
+2026-11-04T23:42:12.3182804Z [command]/usr/bin/git init /home/runner/work/cars-dealership/cars-dealership
+2026-11-04T23:42:12.3265742Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-11-04T23:42:12.3268024Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-11-04T23:42:12.3269709Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-11-04T23:42:12.3271456Z hint: call:
+2026-11-04T23:42:12.3272292Z hint:
+2026-11-04T23:42:12.3273611Z hint: 	git config --global init.defaultBranch <name>
+2026-11-04T23:42:12.3274967Z hint:
+2026-11-04T23:42:12.3276057Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-11-04T23:42:12.3277295Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-11-04T23:42:12.3278104Z hint:
+2026-11-04T23:42:12.3278564Z hint: 	git branch -m <name>
+2026-11-04T23:42:12.3279086Z hint:
+2026-11-04T23:42:12.3279766Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-11-04T23:42:12.3281231Z Initialized empty Git repository in /home/runner/work/cars-dealership/cars-dealership/.git/
+2026-11-04T23:42:12.3283910Z [command]/usr/bin/git remote add origin https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.3324947Z ##[endgroup]
+2026-11-04T23:42:12.3325964Z ##[group]Disabling automatic garbage collection
+2026-11-04T23:42:12.3329681Z [command]/usr/bin/git config --local gc.auto 0
+2026-11-04T23:42:12.3359745Z ##[endgroup]
+2026-11-04T23:42:12.3361198Z ##[group]Setting up auth
+2026-11-04T23:42:12.3367347Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-11-04T23:42:12.3399971Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-11-04T23:42:12.3700973Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-11-04T23:42:12.3733183Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-11-04T23:42:12.3935294Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-11-04T23:42:12.3970024Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-11-04T23:42:12.4158919Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-11-04T23:42:12.4196690Z ##[endgroup]
+2026-11-04T23:42:12.4198413Z ##[group]Fetching the repository
+2026-11-04T23:42:12.4209894Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f:refs/remotes/origin/main
+2026-11-04T23:42:12.9357102Z From https://github.com/dan-u-f/cars-dealership
+2026-11-04T23:42:12.9358915Z  * [new ref]         e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f -> origin/main
+2026-11-04T23:42:12.9375044Z ##[endgroup]
+2026-11-04T23:42:12.9383179Z ##[group]Determining the checkout info
+2026-11-04T23:42:12.9385205Z ##[endgroup]
+2026-11-04T23:42:12.9386071Z [command]/usr/bin/git sparse-checkout disable
+2026-11-04T23:42:12.9420728Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-11-04T23:42:12.9448144Z ##[group]Checking out the ref
+2026-11-04T23:42:12.9451410Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-11-04T23:42:12.9665055Z Switched to a new branch 'main'
+2026-11-04T23:42:12.9669408Z branch 'main' set up to track 'origin/main'.
+2026-11-04T23:42:12.9675833Z ##[endgroup]
+2026-11-04T23:42:12.9709676Z [command]/usr/bin/git log -1 --format=%H
+2026-11-04T23:42:12.9730345Z e60d442934ab8d8e66aeaf1ef640ef4bb4bec07f
+
+========== D:\Descargas\ci-logs\React Frontend\3_Set up Node.js.txt ==========
+2026-11-04T23:42:13.0085085Z ##[group]Run actions/setup-node@v4
+2026-11-04T23:42:13.0086191Z with:
+2026-11-04T23:42:13.0086957Z   node-version: 25
+2026-11-04T23:42:13.0087793Z   cache: npm
+2026-11-04T23:42:13.0088881Z   cache-dependency-path: server/frontend/package-lock.json
+2026-11-04T23:42:13.0090253Z   always-auth: false
+2026-11-04T23:42:13.0091404Z   check-latest: false
+2026-11-04T23:42:13.0101185Z   token: ***
+2026-11-04T23:42:13.0101983Z ##[endgroup]
+2026-11-04T23:42:13.1575772Z Attempting to download 25...
+2026-11-04T23:42:13.1723209Z (node:2311) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:13.1727691Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:13.7204825Z Not found in manifest. Falling back to download directly from Node
+2026-11-04T23:42:13.7673407Z Acquiring 25.9.0 - x64 from https://nodejs.org/dist/v25.9.0/node-v25.9.0-linux-x64.tar.gz
+2026-11-04T23:42:13.9953985Z Extracting ...
+2026-11-04T23:42:14.0057027Z [command]/usr/bin/tar xz --strip 1 --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/a39269df-1ce7-4e42-9733-9b9bb966250e -f /home/runner/work/_temp/cfbe784b-312c-4d1d-80da-3eeeb67b6220
+2026-11-04T23:42:15.1748438Z Adding to the cache ...
+2026-11-04T23:42:16.3578405Z Done
+2026-11-04T23:42:16.3582326Z ##[group]Environment details
+2026-11-04T23:42:16.5787838Z node: v25.9.0
+2026-11-04T23:42:16.5788417Z npm: 11.12.1
+2026-11-04T23:42:16.5788829Z yarn: 1.22.22
+2026-11-04T23:42:16.5789681Z ##[endgroup]
+2026-11-04T23:42:16.5809143Z [command]/opt/hostedtoolcache/node/25.9.0/x64/bin/npm config get cache
+2026-11-04T23:42:16.6679014Z /home/runner/.npm
+2026-11-04T23:42:16.7718761Z Cache hit for: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+2026-11-04T23:42:16.7819976Z (node:2311) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+2026-11-04T23:42:17.0810171Z Received 19193230 of 19193230 (100.0%), 78.2 MBs/sec
+2026-11-04T23:42:17.0811092Z Cache Size: ~18 MB (19193230 B)
+2026-11-04T23:42:17.0834837Z [command]/usr/bin/tar -xf /home/runner/work/_temp/2b1cb90b-c91f-492f-9ebf-f356c09b54a1/cache.tzst -P -C /home/runner/work/cars-dealership/cars-dealership --use-compress-program unzstd
+2026-11-04T23:42:17.1277677Z Cache restored successfully
+2026-11-04T23:42:17.1289202Z Cache restored from key: node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760
+
+========== D:\Descargas\ci-logs\React Frontend\4_Install frontend dependencies.txt ==========
+2026-11-04T23:42:17.1454767Z ##[group]Run npm ci
+2026-11-04T23:42:17.1455098Z [36;1mnpm ci[0m
+2026-11-04T23:42:17.1474223Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:17.1474539Z ##[endgroup]
+2026-11-04T23:42:18.6208945Z npm warn deprecated eslint@9.39.5: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+2026-11-04T23:42:18.8966180Z 
+2026-11-04T23:42:18.8967055Z added 223 packages, and audited 224 packages in 2s
+2026-11-04T23:42:18.8967520Z 
+2026-11-04T23:42:18.8967798Z 114 packages are looking for funding
+2026-11-04T23:42:18.8968327Z   run `npm fund` for details
+2026-11-04T23:42:18.8991248Z 
+2026-11-04T23:42:18.8992167Z found 0 vulnerabilities
+
+========== D:\Descargas\ci-logs\React Frontend\5_Build React application.txt ==========
+2026-11-04T23:42:18.9256620Z ##[group]Run npm run build
+2026-11-04T23:42:18.9256936Z [36;1mnpm run build[0m
+2026-11-04T23:42:18.9272200Z shell: /usr/bin/bash -e {0}
+2026-11-04T23:42:18.9272473Z ##[endgroup]
+2026-11-04T23:42:19.0135063Z 
+2026-11-04T23:42:19.0135554Z > frontend@1.0.0 build
+2026-11-04T23:42:19.0135962Z > vite build
+2026-11-04T23:42:19.0136142Z 
+2026-11-04T23:42:19.2053343Z [33m(!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+2026-11-04T23:42:19.2072300Z   - ESM syntax in a file loaded as CommonJS (vite.config.js:1:1). Use a `.mjs` extension or set `"type": "module"` in the closest package.json
+2026-11-04T23:42:19.2081980Z Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.[39m
+2026-11-04T23:42:19.2250318Z [36mvite v8.3.5 [32mbuilding client environment for production...[36m[39m
+2026-11-04T23:42:19.2410141Z transforming...
+2026-11-04T23:42:19.3169960Z ✓ 24 modules transformed.
+2026-11-04T23:42:19.3357384Z rendering chunks...
+2026-11-04T23:42:19.3697338Z computing gzip size...
+2026-11-04T23:42:19.3736200Z dist/index.html                   0.41 kB │ gzip:  0.28 kB
+2026-11-04T23:42:19.3737002Z dist/assets/index-DJkI1kXl.css    3.66 kB │ gzip:  1.22 kB
+2026-11-04T23:42:19.3737775Z dist/assets/index-DZUlLkq9.js   235.24 kB │ gzip: 73.07 kB
+2026-11-04T23:42:19.3738185Z 
+2026-11-04T23:42:19.3739105Z [32m✓ built in 147ms[39m
+
+========== D:\Descargas\ci-logs\React Frontend\9_Post Set up Node.js.txt ==========
+2026-11-04T23:42:19.3966759Z Post job cleanup.
+2026-11-04T23:42:19.5219002Z (node:2410) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-11-04T23:42:19.5220365Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-11-04T23:42:19.5223820Z Cache hit occurred on the primary key node-cache-Linux-x64-npm-5b7f5e7a8b6d7b713ddb1d7023cf3ec1d73622d5dcbcfbbd3344a9f85e984760, not saving cache.
+
+========== D:\Descargas\ci-logs\React Frontend\system.txt ==========
+2026-11-04T23:42:08.5080000Z Requested labels: ubuntu-latest
+2026-11-04T23:42:08.5080000Z Job defined at: dan-u-f/cars-dealership/.github/workflows/ci.yml@refs/heads/main
+2026-11-04T23:42:08.5080000Z Waiting for a runner to pick up this job...
+2026-11-04T23:42:08.5070000Z Evaluating frontend.if
+2026-11-04T23:42:08.5070000Z Evaluating: success()
+2026-11-04T23:42:08.5070000Z Result: true
+2026-11-04T23:42:09.1470000Z Job is about to start running on the hosted runner: GitHub Actions 1000000029
+2026-11-04T23:42:09.1510000Z Job is waiting for a hosted runner to come online.
 
