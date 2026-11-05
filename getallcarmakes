@@ -1,5 +1,6 @@
 ﻿Comando cURL utilizado:
-curl.exe -s http://127.0.0.1:8000/api/cars/
 
-Salida del servidor:
-{"car_makes": [{"id": 1, "name": "Toyota", "models": [{"id": 1, "name": "Corolla", "car_type": "Sedan"}, {"id": 2, "name": "Camry", "car_type": "Sedan"}, {"id": 3, "name": "RAV4", "car_type": "SUV"}]}, {"id": 2, "name": "Ford", "models": [{"id": 4, "name": "Mustang", "car_type": "Coupe"}, {"id": 5, "name": "Explorer", "car_type": "SUV"}, {"id": 6, "name": "F-150", "car_type": "Truck"}]}, {"id": 3, "name": "Honda", "models": [{"id": 7, "name": "Civic", "car_type": "Sedan"}, {"id": 8, "name": "Accord", "car_type": "Sedan"}, {"id": 9, "name": "CR-V", "car_type": "SUV"}]}, {"id": 4, "name": "Chevrolet", "models": [{"id": 10, "name": "Malibu", "car_type": "Sedan"}, {"id": 11, "name": "Silverado", "car_type": "Truck"}, {"id": 12, "name": "Equinox", "car_type": "SUV"}]}]}
+curl.exe -s http://127.0.0.1:8000/djangoapp/get_cars
+
+Salida real del servidor:
+{"CarMakes": [{"id": 1, "name": "Toyota", "CarModels": [{"id": 1, "name": "Corolla", "car_type": "Sedan"}, {"id": 2, "name": "Camry", "car_type": "Sedan"}, {"id": 3, "name": "RAV4", "car_type": "SUV"}]}, {"id": 2, "name": "Ford", "CarModels": [{"id": 4, "name": "Mustang", "car_type": "Coupe"}, {"id": 5, "name": "Explorer", "car_type": "SUV"}, {"id": 6, "name": "F-150", "car_type": "Truck"}]}, {"id": 3, "name": "Honda", "CarModels": [{"id": 7, "name": "Civic", "car_type": "Sedan"}, {"id": 8, "name": "Accord", "car_type": "Sedan"}, {"id": 9, "name": "CR-V", "car_type": "SUV"}]}, {"id": 4, "name": "Chevrolet", "CarModels": [{"id": 10, "name": "Malibu", "car_type": "Sedan"}, {"id": 11, "name": "Silverado", "car_type": "Truck"}, {"id": 12, "name": "Equinox", "car_type": "SUV"}]}]}

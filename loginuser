@@ -1,5 +1,9 @@
 ﻿Comando cURL utilizado:
-curl.exe -s -b cookies.txt -c cookies.txt -H "Content-Type: application/json" -H "X-CSRFToken: <TOKEN_CSRF>" --data-binary "@-" http://127.0.0.1:8000/api/login/
 
-Salida del servidor:
-{"status": "success", "message": "Inicio de sesi\u00f3n correcto", "username": "dan"}
+curl.exe -s -b cookies.txt -c cookies.txt -X POST -H "Content-Type: application/json" -H "X-CSRFToken: <TOKEN_CSRF>" --data-binary "@login-test.json" http://127.0.0.1:8000/djangoapp/login
+
+Cuerpo JSON enviado:
+{"userName":"dan","password":"<CONTRASEÑA_OCULTA>"}
+
+Salida real del servidor:
+{"status": "Authenticated", "userName": "dan"}
